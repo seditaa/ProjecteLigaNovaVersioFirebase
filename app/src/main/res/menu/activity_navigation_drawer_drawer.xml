@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/partidos"
+            android:icon="@drawable/pelota"
+            android:title="Partidos" />
+        <item
+            android:id="@+id/calendario"
+            android:icon="@drawable/calendario"
+            android:title="Calendario" />
+        <item
+            android:id="@+id/clasificacion"
+            android:icon="@drawable/trophy"
+            android:title="Clasificación" />
+        <item
+            android:id="@+id/favoritos"
+            android:icon="@drawable/estrella"
+            android:title="Favoritos" />
+        <item
+            android:id="@+id/goleadores"
+            android:icon="@drawable/bota"
+            android:title="Goleadores y asistentes" />
+    </group>
+
+</menu>
+

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "85936570142",
+    "firebase_url": "https://ligasantandernuevo.firebaseio.com",
+    "project_id": "ligasantandernuevo",
+    "storage_bucket": "ligasantandernuevo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85936570142:android:acd833dabf2a69fd",
+        "android_client_info": {
+          "package_name": "com.example.danielmartinezg1.ligasantander"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85936570142-3cabchvo9gsbu29m62j1ba1v8btmuthe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.danielmartinezg1.ligasantander",
+            "certificate_hash": "13b0ba98b933fb0f8679de8351a00894eab5b438"
+          }
+        },
+        {
+          "client_id": "85936570142-uhaldko77go2jhulbeev9pso8h3tk9fl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvS9UcpvUalbsvKWXi5VcEjJ3PueZZVZc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85936570142-uhaldko77go2jhulbeev9pso8h3tk9fl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
