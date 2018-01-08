@@ -130,7 +130,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 fragmentTransaction = fragmentTransaction.replace(R.id.content_frame, BlankFragment);
                 fragmentTransaction.commit();
 
-                mDatabase = FirebaseDatabase.getInstance().getReference().child("semana");
+                mDatabase = FirebaseDatabase.getInstance().getReference().child("semana2");
                 childEventListener = new ChildEventListener() {
                     @Override
                     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -154,7 +154,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
-
+                        Log.e("Error","Error",databaseError.toException());
                     }
                 };
                 eventListener = new ValueEventListener() {
@@ -163,9 +163,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
                         txt_prueba = (TextView) findViewById(R.id.txt_prueba);
                         txt_prueba2 = (TextView) findViewById(R.id.txt_prueba2);
                         txt_prueba3 = (TextView) findViewById(R.id.txt_prueba3);
-                        //txt_prueba.setText(dataSnapshot.child("elem1").getValue().toString());
-                        //txt_prueba2.setText(dataSnapshot.child("elem2").getValue().toString());
-                        //txt_prueba3.setText(dataSnapshot.child("elem3").getValue().toString());
+                        //txt_prueba.setText(dataSnapshot.child("dia1").getValue().toString());
+                        //txt_prueba2.setText(dataSnapshot.child("dia2").getValue().toString());
+                        //txt_prueba3.setText(dataSnapshot.child("dia3").getValue().toString());
                     }
 
                     @Override
