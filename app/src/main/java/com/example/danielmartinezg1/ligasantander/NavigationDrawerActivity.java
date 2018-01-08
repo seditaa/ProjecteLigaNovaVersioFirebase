@@ -60,7 +60,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        setFragment(0);
+        setFragment(5);
     }
 
     @Override
@@ -110,7 +110,23 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 setFragment(1);
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
-
+            case R.id.clasificacion:
+                menuItem.setChecked(true);
+                setFragment(2);
+                drawer.closeDrawer(GravityCompat.START);
+                Log.i("Dani","clicado");
+                return true;
+            case R.id.favoritos:
+                menuItem.setChecked(true);
+                setFragment(3);
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            case R.id.goleadores:
+                menuItem.setChecked(true);
+                setFragment(4);
+                drawer.closeDrawer(GravityCompat.START);
+                Log.i("Dani","clicado");
+                return true;
 
         }
         return true;
@@ -184,7 +200,34 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 fragmentTransaction.replace(R.id.content_frame, calendarFragment);
                 fragmentTransaction.commit();
                 break;
-
+            case 2:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                ClasificacionFragment clasificacionFragment = new ClasificacionFragment();
+                fragmentTransaction.replace(R.id.content_frame, clasificacionFragment);
+                fragmentTransaction.commit();
+                break;
+            case 3:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                FavoritosFragment favoritosFragment = new FavoritosFragment();
+                fragmentTransaction.replace(R.id.content_frame, favoritosFragment);
+                fragmentTransaction.commit();
+                break;
+            case 4:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                GoleadoresFragment goleadoresFragment = new GoleadoresFragment();
+                fragmentTransaction.replace(R.id.content_frame, goleadoresFragment);
+                fragmentTransaction.commit();
+                break;
+            case 5:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                WelcomeFragment welcomeFragment = new WelcomeFragment();
+                fragmentTransaction.replace(R.id.content_frame, welcomeFragment);
+                fragmentTransaction.commit();
+                break;
         }
     }
 
