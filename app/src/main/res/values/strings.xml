@@ -9,4 +9,24 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Welcome">Bienvenido!</string>
+    <string name="calendar">CALENDARIO</string>
+    <string name="puntos_suspensivos">...</string>
+    <string name="todo">TODO</string>
+    <string name="Clasificacion">Clasificación</string>
+    <string name="equipos">Equipos</string>
+    <string name="puntos">Puntos</string>
+    <string name="partidosganados">PG</string>
+    <string name="partidosperdidos" >PP</string>
+    <string name="partidosempatados">PE</string>
+    <string name="partidosjugados">PJ</string>
+    <string name="partidos">Partidos</string>
+
+    <!--Array con los valores de la cabecera de la tabla-->
+    <string-array name="cabecera_tabla">
+        <item>Id de la fila</item>
+        <item>Valor</item>
+        <item>Valor 2</item>
+        <item>Valor 3</item>
+        <item>Valor 4</item>
+    </string-array>
 </resources>

@@ -7,6 +7,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -17,8 +19,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,9 +41,11 @@ public class NavigationDrawerActivity extends AppCompatActivity
     TextView txt_prueba;
     TextView txt_prueba2;
     TextView txt_prueba3;
+
     public DatabaseReference mDatabase;
     public ValueEventListener eventListener;
     public ChildEventListener childEventListener;
+    public FirebaseListAdapter <String> firebaseListAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -220,6 +227,18 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 GoleadoresFragment goleadoresFragment = new GoleadoresFragment();
                 fragmentTransaction.replace(R.id.content_frame, goleadoresFragment);
                 fragmentTransaction.commit();
+
+                ListView mListView = (ListView) findViewById(R.id.listview);
+                mDatabase = FirebaseDatabase.getInstance().getReference().child("20161120");
+                firebaseListAdapter = new FirebaseListAdapter<String>(this, String.class, android.R.layout.simple_list_item_1, mDatabase) {
+                    @Override
+                    protected void populateView(View v, String model, int position) {
+                        TextView textview = (TextView) v.findViewById(android.R.id.text1);
+                        textview.setText(model);
+                    }
+                };
+                mListView.setAdapter(firebaseListAdapter);
+
                 break;
             case 5:
                 fragmentManager = getSupportFragmentManager();
