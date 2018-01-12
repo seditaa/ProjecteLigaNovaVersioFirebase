@@ -20,6 +20,13 @@
     <string name="partidosempatados">PE</string>
     <string name="partidosjugados">PJ</string>
     <string name="partidos">Partidos</string>
+    <string name="calendario">Calendario</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="goleadores">Goleadores y asistentes</string>
+    <string name="seleccionar">Selecciona</string>
+    <string name="textobotonfav">Añadir</string>
+    <string name="añadirequipo">Añade tu equipo favorito!!</string>
+    <string name="TituloCalendario">Escoge la jornada</string>
 
     <!--Array con los valores de la cabecera de la tabla-->
     <string-array name="cabecera_tabla">
@@ -28,5 +35,69 @@
         <item>Valor 2</item>
         <item>Valor 3</item>
         <item>Valor 4</item>
+    </string-array>
+
+    <string-array name="nombresequipos">
+        <item>Alavés</item>
+        <item>Athletic Club</item>
+        <item>Atlético de Madrid</item>
+        <item>Celta</item>
+        <item>Deportivo</item>
+        <item>Eibar</item>
+        <item>Espanyol</item>
+        <item>FC Barcelona</item>
+        <item>Getafe</item>
+        <item>Girona</item>
+        <item>Las Palmas</item>
+        <item>Leganés</item>
+        <item>Levante</item>
+        <item>Málaga</item>
+        <item>Real Betis</item>
+        <item>Real Madrid</item>
+        <item>Real Sociedad</item>
+        <item>Sevilla</item>
+        <item>Valencia</item>
+        <item>Villarreal</item>
+    </string-array>
+
+    <string-array name="jornadas">
+        <item>Jornada1</item>
+        <item>Jornada2</item>
+        <item>Jornada3</item>
+        <item>Jornada4</item>
+        <item>Jornada5</item>
+        <item>Jornada6</item>
+        <item>Jornada7</item>
+        <item>Jornada8</item>
+        <item>Jornada9</item>
+        <item>Jornada10</item>
+        <item>Jornada11</item>
+        <item>Jornada12</item>
+        <item>Jornada13</item>
+        <item>Jornada14</item>
+        <item>Jornada15</item>
+        <item>Jornada16</item>
+        <item>Jornada17</item>
+        <item>Jornada18</item>
+        <item>Jornada19</item>
+        <item>Jornada20</item>
+        <item>Jornada21</item>
+        <item>Jornada22</item>
+        <item>Jornada23</item>
+        <item>Jornada24</item>
+        <item>Jornada25</item>
+        <item>Jornada26</item>
+        <item>Jornada27</item>
+        <item>Jornada28</item>
+        <item>Jornada29</item>
+        <item>Jornada30</item>
+        <item>Jornada31</item>
+        <item>Jornada32</item>
+        <item>Jornada33</item>
+        <item>Jornada34</item>
+        <item>Jornada35</item>
+        <item>Jornada36</item>
+        <item>Jornada37</item>
+        <item>Jornada38</item>
     </string-array>
 </resources>

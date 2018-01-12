@@ -23,10 +23,12 @@
     </TableRow>
     <TableRow
         android:id="@+id/Titulos"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
         <TextView
             android:id="@+id/equipos"
+            android:gravity="center_horizontal"
             android:text="@string/equipos"></TextView>
         <TextView
             android:id="@+id/puntos"
@@ -57,6 +59,7 @@
     <TableRow
         android:layout_height="wrap_content"
         android:id="@+id/equipo1"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent">
         <TextView
             android:id="@+id/equipo1nombre"
@@ -514,29 +517,6 @@
             android:gravity="center_horizontal"></TextView>
         <TextView
             android:id="@+id/equipo20pj"
-            android:gravity="center_horizontal"></TextView>
-    </TableRow>
-    <TableRow
-        android:layout_height="wrap_content"
-        android:id="@+id/equipo21"
-        android:layout_width="match_parent">
-        <TextView
-            android:id="@+id/equipo21nombre"
-            android:textStyle="bold"></TextView>
-        <TextView
-            android:id="@+id/equipo21puntos"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo21pg"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo21pp"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo21pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo21pj"
             android:gravity="center_horizontal"></TextView>
     </TableRow>
 

@@ -1,54 +1,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.danielmartinezg1.ligasantander.CalendarFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
+    <ListView
+        android:id="@+id/listViewJornadas"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/button"
-        android:layout_toLeftOf="@+id/imageView2"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toStartOf="@+id/imageView2"
-        android:text="@string/calendar"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="40sp"
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/listViewJornadas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/TituloCalendario"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/puntos_suspensivos"
-        android:textSize="20sp" />
-
-    <ListView
-        android:id="@+id/team_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView" />
-
-
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="55dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/team_list"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        app:srcCompat="@drawable/calendario"
-        android:contentDescription="@string/todo" />
-
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:src="@drawable/calendario" />
 </RelativeLayout>
