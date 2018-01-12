@@ -14,23 +14,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class GoleadoresFragment extends Fragment {
 
-    //private View mRootView;
-    //public ListView mListView;
-    //private FirebaseListAdapter <String> mListAdapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_goleadores, container, false);
         getActivity().setTitle("Goleadores y asistentes");
-        //initialiseView();
 
 
         return view;
     }
-/*
-    private void initialiseView() {
-        mListView = (ListView)mRootView.findViewById(R.id.)
-    }
-*/
 
 }

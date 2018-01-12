@@ -12,7 +12,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class EscogerequipoFragment extends Fragment {
+
+    private ArrayAdapter<String> adaptador;
+    private ArrayList<String> teamlist;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -23,10 +29,11 @@ public class EscogerequipoFragment extends Fragment {
         // Agafem el string array de equips de futbol que hem definit mitjançant un recurs i els fiquem en un string array
         Resources res = getResources();
         String[] equiposparaescoger = res.getStringArray(R.array.nombresequipos);
+        teamlist = new ArrayList<>(Arrays.asList(equiposparaescoger));
 
         // Creem ArrayAdapter amb els equips
-        ArrayAdapter adaptador = new ArrayAdapter(getActivity(),
-                android.R.layout.simple_list_item_1, equiposparaescoger);
+        adaptador = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1, teamlist);
 
         // Declarem la llista del layout
         ListView lista = (ListView) view.findViewById(R.id.ListaEquiposFavoritos);
@@ -42,7 +49,13 @@ public class EscogerequipoFragment extends Fragment {
                 fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 FavoritosFragment favoritosfrag = new FavoritosFragment();
+
+                Bundle ItemSeleccionado = new Bundle();
+                String enviar_item = teamlist.get(position);
+                ItemSeleccionado.putString("item",enviar_item);
+                favoritosfrag.setArguments(ItemSeleccionado);
                 fragmentTransaction.replace(R.id.content_frame, favoritosfrag);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });

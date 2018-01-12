@@ -31,6 +31,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -149,11 +152,32 @@ public class NavigationDrawerActivity extends AppCompatActivity
             case 0:
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
-                BlankFragment BlankFragment = new BlankFragment();
-                fragmentTransaction = fragmentTransaction.replace(R.id.content_frame, BlankFragment);
+                PartidosFragment PartidosFragment = new PartidosFragment();
+                fragmentTransaction = fragmentTransaction.replace(R.id.content_frame, PartidosFragment);
                 fragmentTransaction.commit();
 
-                mDatabase = FirebaseDatabase.getInstance().getReference().child("20161120");
+/*
+                mDatabase = FirebaseDatabase.getInstance().getReference("provaJugador");
+//                List<Jugador> lj = new ArrayList<Jugador>();
+//                lj.add(new Jugador("Mesi",10,20));
+//                mDatabase.setValue(new Equipo("b",34,78,lj));
+                mDatabase.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        txt_prueba = (TextView) findViewById(R.id.txt_prueba);
+                        txt_prueba2 = (TextView) findViewById(R.id.txt_prueba2);
+                        txt_prueba3 = (TextView) findViewById(R.id.txt_prueba3);
+
+                        Equipo e = dataSnapshot.getValue(Equipo.class);
+                        txt_prueba3.setText(e.getNom());
+                        txt_prueba2.setText(e.getJugadorList().get(0).getNom());
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
                 childEventListener = new ChildEventListener() {
                     @Override
                     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -196,9 +220,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
                     }
                 };
-                mDatabase.addChildEventListener(childEventListener);
-                mDatabase.addValueEventListener(eventListener);
-
+                //mDatabase.addChildEventListener(childEventListener);
+                //mDatabase.addValueEventListener(eventListener);
+*/
                 break;
             case 1:
                 fragmentManager = getSupportFragmentManager();
