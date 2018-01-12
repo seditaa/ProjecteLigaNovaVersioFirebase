@@ -8,15 +8,18 @@ class Jugador {
     private String nom;
     private int dorsal;
     private int gols;
+    private int asistencies;
 
     public Jugador() {
         gols=0;
+        asistencies = 0;
     }
 
-    public Jugador(String nom, int dorsal, int gols) {
+    public Jugador(String nom, int dorsal, int gols, int asistencies) {
         this.nom = nom;
         this.dorsal = dorsal;
         this.gols = gols;
+        this.asistencies = asistencies;
     }
 
     public String getNom() {
@@ -30,5 +33,9 @@ class Jugador {
 
     public int getGols() {
         return gols;
+    }
+
+    public int getAsistencies(){
+        return asistencies;
     }
 }

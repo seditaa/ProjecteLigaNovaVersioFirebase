@@ -4,15 +4,19 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class PartidosFragment extends Fragment {
+
+    private List<ItemClasificacion> ItemClass;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -23,9 +27,10 @@ public class PartidosFragment extends Fragment {
 
         ListView lv = (ListView) view.findViewById(R.id.match_list);
 
-        ArrayList<ItemClasificacion> itemsPartido = obtenerItems();
-
-        ItemClasificacionAdapter adapter = new ItemClasificacionAdapter(this, itemsPartido) {
+        //ArrayList<ItemClasificacion> itemsPartido = obtenerItems();
+        ItemClass  = new ArrayList<ItemClasificacion>();
+        ItemClass = obtenerItems();
+        ItemClasificacionAdapter adapter = new ItemClasificacionAdapter(getActivity(), ItemClass) {
         };
 
         lv.setAdapter(adapter);
@@ -36,14 +41,14 @@ public class PartidosFragment extends Fragment {
 
 
     private ArrayList<ItemClasificacion> obtenerItems() {
+        Log.i("Dani","he llegado");
+
         ArrayList<ItemClasificacion> items = new ArrayList<ItemClasificacion>();
 
-        items.add(new ItemClasificacion(1, "Patatas", "Tuberculo",
-                "12/01/2012"));
-        items.add(new ItemClasificacion(2, "Naranja", "Fruta",
-                "cksndlskdc"));
-        items.add(new ItemClasificacion(3, "Lechuga", "Verdura",
-                "fngbdbgdgb"));
+        items.add(new ItemClasificacion("barça", "aldn", "10", "5", "Patatas"));
+
+        items.add(new ItemClasificacion("madri", "Naranja", "1",
+                "1", "hoy"));
 
         return items;
     }
