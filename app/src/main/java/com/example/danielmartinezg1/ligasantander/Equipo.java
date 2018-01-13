@@ -10,6 +10,7 @@ public class Equipo {
     private String nom;
     private int gols;
     private int punts;
+    private List<Jugador> jugadorList;
 
     public Equipo(String nom, int gols, int punts, List<Jugador> jugadorList) {
         this.nom = nom;
@@ -17,8 +18,6 @@ public class Equipo {
         this.punts = punts;
         this.jugadorList = jugadorList;
     }
-
-    private List<Jugador> jugadorList;
 
     public Equipo() {
     }

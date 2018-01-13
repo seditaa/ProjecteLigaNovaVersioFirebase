@@ -10,7 +10,7 @@ class Jugador {
     private int gols;
     private int asistencies;
 
-    public Jugador() {
+    public Jugador(String mesi, int i, int i1) {
         gols=0;
         asistencies = 0;
     }

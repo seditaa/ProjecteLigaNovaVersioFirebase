@@ -10,8 +10,25 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class CalendarFragment extends Fragment {
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class CalendarFragment extends Fragment {
+    public DatabaseReference mDatabase;
+    public ValueEventListener eventListener;
+    ListView lista;
+    private ArrayAdapter<String> adaptador;
+    ArrayList<String> jlist = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -19,17 +36,48 @@ public class CalendarFragment extends Fragment {
       View view = inflater.inflate(R.layout.fragment_calendar, container, false);
 
         getActivity().setTitle(R.string.calendario);
-        // Agafem el string array de les jornades de futbol que hem definit mitjançant un recurs i els fiquem en un string array
-        Resources res = getResources();
-        String[] jornadas = res.getStringArray(R.array.jornadas);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference("Jornadas");
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                jlist.clear();
+                for (DataSnapshot ds : dataSnapshot.getChildren())
+                {
+                    String name=ds.getValue(JornadasList.class).getNombre_jornada();
+                    jlist.add(name);
+                }
+
+
+               /*
+                jlist.clear();
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    Jornadas university = postSnapshot.getValue(Jornadas.class);
+                    jlist.add(university);*/
+            }
+
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        mDatabase.addValueEventListener(eventListener);
+
         // Declarem la llista del layout
-        ListView lista = (ListView) view.findViewById(R.id.listViewJornadas);
+        lista = (ListView) view.findViewById(R.id.listViewJornadas);
+        final List<JornadasList> jlist = new ArrayList<>();
         // Creem ArrayAdapter amb les jornades que es disputen
-        ArrayAdapter adaptador = new ArrayAdapter(getActivity(),
-                android.R.layout.simple_list_item_1, jornadas);
+        adaptador = new ArrayAdapter(getActivity(),
+                android.R.layout.simple_list_item_1,jlist);
+
+
+
 
 
         lista.setAdapter(adaptador);
+
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

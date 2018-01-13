@@ -7,19 +7,15 @@ import java.util.List;
  */
 
 public class Jornadas {
-    private int numero_jornada;
-    private List<Equipo> EquipoList;
+    private List <JornadasList> jornadas_list;
 
-    public Jornadas(int numero_jornada, List<Equipo> equipoList) {
-        this.numero_jornada = numero_jornada;
-        EquipoList = equipoList;
+
+    public Jornadas(List<JornadasList> jornadas_list) {
+        this.jornadas_list = jornadas_list;
     }
 
-    public int getNumero_jornada() {
-        return numero_jornada;
+    public List<JornadasList> getJornadas_list() {
+        return jornadas_list;
     }
 
-    public List<Equipo> getEquipoList() {
-        return EquipoList;
-    }
 }
