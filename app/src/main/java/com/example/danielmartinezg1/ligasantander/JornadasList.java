@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Dani on 12/01/2018.
  */
 
-public class JornadasList implements Serializable {
+public class JornadasList {
     private String nombre_jornada;
     private List<Partidos> partidos_list;
 
