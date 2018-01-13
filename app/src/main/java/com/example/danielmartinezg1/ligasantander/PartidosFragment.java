@@ -31,9 +31,7 @@ public class PartidosFragment extends Fragment {
     private List<Partidos> ItemClass;
     public DatabaseReference mDatabase;
     public ValueEventListener eventListener;
-    public FirebaseListAdapter<JornadasList> listAdapter;
     private ListView lv;
-    private JornadasList jornadasList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

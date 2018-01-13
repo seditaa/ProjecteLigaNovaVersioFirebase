@@ -22,9 +22,456 @@ public DatabaseReference mDatabase;
         getActivity().setTitle("Bienvenido");
 
         actualizaJornadasPartidos();
-
+        actualizaEquipo();
 
         return view;
+    }
+
+    private void actualizaEquipo() {
+        mDatabase = FirebaseDatabase.getInstance().getReference("Equipos");
+
+        List<Jugador> jugadorlist = new ArrayList<Jugador>();
+
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+        jugadorlist.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist1 = new ArrayList<Jugador>();
+
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+        jugadorlist1.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist2 = new ArrayList<Jugador>();
+
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+        jugadorlist2.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist3 = new ArrayList<Jugador>();
+
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+        jugadorlist3.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist4 = new ArrayList<Jugador>();
+
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+        jugadorlist4.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist5 = new ArrayList<Jugador>();
+
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+        jugadorlist5.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist6 = new ArrayList<Jugador>();
+
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+        jugadorlist6.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist7 = new ArrayList<Jugador>();
+
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+        jugadorlist7.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist8 = new ArrayList<Jugador>();
+
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+        jugadorlist8.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist9 = new ArrayList<Jugador>();
+
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+        jugadorlist9.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist10 = new ArrayList<Jugador>();
+
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+        jugadorlist10.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist11 = new ArrayList<Jugador>();
+
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+        jugadorlist11.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist12 = new ArrayList<Jugador>();
+
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+        jugadorlist12.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist13 = new ArrayList<Jugador>();
+
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+        jugadorlist13.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist14 = new ArrayList<Jugador>();
+
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+        jugadorlist14.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist15 = new ArrayList<Jugador>();
+
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+        jugadorlist15.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist16 = new ArrayList<Jugador>();
+
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+        jugadorlist16.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist17 = new ArrayList<Jugador>();
+
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+        jugadorlist17.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist18 = new ArrayList<Jugador>();
+
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+        jugadorlist18.add(new Jugador("nombre","4","4"));
+
+        List<Jugador> jugadorlist19 = new ArrayList<Jugador>();
+
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+        jugadorlist19.add(new Jugador("nombre","4","4"));
+
+        mDatabase.child("Equipo1").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist));
+        mDatabase.child("Equipo2").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist1));
+        mDatabase.child("Equipo3").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist2));
+        mDatabase.child("Equipo4").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist3));
+        mDatabase.child("Equipo5").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist4));
+        mDatabase.child("Equipo6").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist5));
+        mDatabase.child("Equipo7").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist6));
+        mDatabase.child("Equipo8").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist7));
+        mDatabase.child("Equipo9").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist8));
+        mDatabase.child("Equipo10").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist9));
+        mDatabase.child("Equipo11").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist10));
+        mDatabase.child("Equipo12").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist11));
+        mDatabase.child("Equipo13").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist12));
+        mDatabase.child("Equipo14").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist13));
+        mDatabase.child("Equipo15").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist14));
+        mDatabase.child("Equipo16").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist15));
+        mDatabase.child("Equipo17").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist16));
+        mDatabase.child("Equipo18").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist17));
+        mDatabase.child("Equipo19").setValue(new Equipo("nom","7","0","6","2","8",jugadorlist18));
+        mDatabase.child("Equipo20").setValue(new Equipo("nom","7","0","bkbkjbnkjln","2","8",jugadorlist19));
+
+
     }
 
     @NonNull

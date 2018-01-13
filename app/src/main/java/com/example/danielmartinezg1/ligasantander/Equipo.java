@@ -8,33 +8,49 @@ import java.util.List;
 
 public class Equipo {
     private String nom;
-    private int gols;
-    private int punts;
+    private String punts;
+    private String pj;
+    private String pg;
+    private String pp;
+    private String pe;
     private List<Jugador> jugadorList;
 
-    public Equipo(String nom, int gols, int punts, List<Jugador> jugadorList) {
+    public Equipo(String nom, String punts, String pj, String pg, String pp, String pe, List<Jugador> jugadorList) {
         this.nom = nom;
-        this.gols = gols;
         this.punts = punts;
+        this.pj = pj;
+        this.pg = pg;
+        this.pp = pp;
+        this.pe = pe;
         this.jugadorList = jugadorList;
-    }
-
-    public Equipo() {
     }
 
     public String getNom() {
         return nom;
     }
 
-    public int getGols() {
-        return gols;
-    }
 
-    public int getPunts() {
+    public String getPunts() {
         return punts;
     }
 
     public List<Jugador> getJugadorList() {
         return jugadorList;
+    }
+
+    public String getPj() {
+        return pj;
+    }
+
+    public String getPg() {
+        return pg;
+    }
+
+    public String getPp() {
+        return pp;
+    }
+
+    public String getPe() {
+        return pe;
     }
 }

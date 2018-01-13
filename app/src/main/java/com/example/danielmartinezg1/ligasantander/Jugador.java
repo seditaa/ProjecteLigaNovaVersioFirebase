@@ -6,18 +6,11 @@ package com.example.danielmartinezg1.ligasantander;
 
 class Jugador {
     private String nom;
-    private int dorsal;
-    private int gols;
-    private int asistencies;
+    private String gols;
+    private String asistencies;
 
-    public Jugador(String mesi, int i, int i1) {
-        gols=0;
-        asistencies = 0;
-    }
-
-    public Jugador(String nom, int dorsal, int gols, int asistencies) {
+    public Jugador(String nom, String gols, String asistencies) {
         this.nom = nom;
-        this.dorsal = dorsal;
         this.gols = gols;
         this.asistencies = asistencies;
     }
@@ -27,15 +20,11 @@ class Jugador {
         return nom;
     }
 
-    public int getDorsal() {
-        return dorsal;
-    }
-
-    public int getGols() {
+    public String getGols() {
         return gols;
     }
 
-    public int getAsistencies(){
+    public String getAsistencies(){
         return asistencies;
     }
 }
