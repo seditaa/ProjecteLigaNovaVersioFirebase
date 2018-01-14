@@ -18,6 +18,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class PartidosFragment extends Fragment {
     public DatabaseReference mDatabase;
     public ValueEventListener eventListener;
     private ListView lv;
+    private ItemClasificacionAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,17 +44,36 @@ public class PartidosFragment extends Fragment {
 
         lv = (ListView) view.findViewById(R.id.match_list);
 
-        ItemClass  = new ArrayList<Partidos>();
-        ItemClass = obtenerItems();
-        ItemClasificacionAdapter adapter = new ItemClasificacionAdapter(getActivity(), ItemClass) {
-        };
+       // ItemClass  = new ArrayList<Partidos>();
+        //ItemClass = obtenerItems();
+       // ItemClasificacionAdapter adapter = new ItemClasificacionAdapter(getActivity(), ItemClass) {
+        //};
 
-        lv.setAdapter(adapter);
+       // lv.setAdapter(adapter);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference().child("Jornadas").child("jornadas_list").child("0").child("partidos_list");
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                GenericTypeIndicator<List<Partidos>> t = new GenericTypeIndicator<List<Partidos>>() {};
+                ItemClass = dataSnapshot.getValue(t);
+                adapter = new ItemClasificacionAdapter(getActivity(), ItemClass);
+                lv.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
 
         return view;
     }
 
-    private ArrayList<Partidos> obtenerItems() {
+    /*private ArrayList<Partidos> obtenerItems() {
         Log.i("Dani","he llegado");
 
         ArrayList<Partidos> items = new ArrayList<Partidos>();
@@ -63,7 +84,7 @@ public class PartidosFragment extends Fragment {
                 "1", "hoy"));
 
         return items;
-    }
+    }*/
 }
 
 

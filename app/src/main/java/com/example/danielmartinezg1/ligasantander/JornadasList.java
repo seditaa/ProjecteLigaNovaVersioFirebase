@@ -11,6 +11,9 @@ public class JornadasList {
     private String nombre_jornada;
     private List<Partidos> partidos_list;
 
+    public JornadasList() {
+    }
+
     public JornadasList(String nombre_jornada, List<Partidos> partidos_list) {
         this.nombre_jornada = nombre_jornada;
         this.partidos_list = partidos_list;

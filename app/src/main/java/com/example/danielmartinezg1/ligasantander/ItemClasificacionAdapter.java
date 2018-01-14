@@ -17,7 +17,7 @@ import java.util.List;
  * Created by Dani on 12/01/2018.
  */
 
-public abstract class ItemClasificacionAdapter extends BaseAdapter {
+public class ItemClasificacionAdapter extends BaseAdapter {
 
     protected PartidosFragment fragment;
     protected ArrayList<Partidos> items;

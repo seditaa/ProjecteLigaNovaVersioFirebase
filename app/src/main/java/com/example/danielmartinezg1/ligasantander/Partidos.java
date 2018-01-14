@@ -12,6 +12,9 @@ class Partidos {
     private String dia;
     private String hora;
 
+    public Partidos() {
+    }
+
     public Partidos(int resultado1, int resultado2) {
         resultado1 = 0;
         resultado2 = 0;

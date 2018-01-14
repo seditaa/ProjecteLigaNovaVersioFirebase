@@ -3,6 +3,7 @@ package com.example.danielmartinezg1.ligasantander;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,12 +24,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static android.content.ContentValues.TAG;
+
 public class CalendarFragment extends Fragment {
+    private List<JornadasList> ItemClass;
     public DatabaseReference mDatabase;
     public ValueEventListener eventListener;
-    ListView lista;
-    private ArrayAdapter<String> adaptador;
-    ArrayList<String> jlist = new ArrayList<>();
+    private  ListView lista;
+    private CalendarAdapter adaptador;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -37,46 +40,27 @@ public class CalendarFragment extends Fragment {
 
         getActivity().setTitle(R.string.calendario);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference("Jornadas");
-        mDatabase.addValueEventListener(new ValueEventListener() {
+        lista = (ListView) view.findViewById(R.id.listViewJornadas);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference().child("Jornadas").child("jornadas_list");
+
+        myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
-                jlist.clear();
-                for (DataSnapshot ds : dataSnapshot.getChildren())
-                {
-                    String name=ds.getValue(JornadasList.class).getNombre_jornada();
-                    jlist.add(name);
-                }
-
-
-               /*
-                jlist.clear();
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    Jornadas university = postSnapshot.getValue(Jornadas.class);
-                    jlist.add(university);*/
+                GenericTypeIndicator<List<JornadasList>> t = new GenericTypeIndicator<List<JornadasList>>() {};
+                ItemClass = dataSnapshot.getValue(t);
+                adaptador = new CalendarAdapter(getActivity(), ItemClass);
+                lista.setAdapter(adaptador);
             }
-
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-        mDatabase.addValueEventListener(eventListener);
 
-        // Declarem la llista del layout
-        lista = (ListView) view.findViewById(R.id.listViewJornadas);
-        final List<JornadasList> jlist = new ArrayList<>();
-        // Creem ArrayAdapter amb les jornades que es disputen
-        adaptador = new ArrayAdapter(getActivity(),
-                android.R.layout.simple_list_item_1,jlist);
-
-
-
-
-
-        lista.setAdapter(adaptador);
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
