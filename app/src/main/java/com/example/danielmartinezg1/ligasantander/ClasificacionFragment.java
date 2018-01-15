@@ -33,7 +33,7 @@ public class ClasificacionFragment extends Fragment {
 
         getActivity().setTitle("Clasificación");
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("clasificacion_fragment");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Equipos").child("equipo_list");
         eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -45,31 +45,30 @@ public class ClasificacionFragment extends Fragment {
                 TextView puntos = (TextView) view.findViewById(R.id.equipo1puntos);
                 TextView partidosganados = (TextView) view.findViewById(R.id.equipo1pg);
                 TextView partidosperdidos = (TextView) view.findViewById(R.id.equipo1pp);
-                /*
-                TextView equipo4nombre = (TextView) findViewById(R.id.equipo4nombre);
-                TextView equipo5nombre = (TextView) findViewById(R.id.equipo5nombre);
-                TextView equipo6nombre = (TextView) findViewById(R.id.equipo6nombre);
-                TextView equipo7nombre = (TextView) findViewById(R.id.equipo7nombre);
-                TextView equipo8nombre = (TextView) findViewById(R.id.equipo8nombre);
-                TextView equipo9nombre = (TextView) findViewById(R.id.equipo9nombre);
-                TextView equipo10nombre = (TextView) findViewById(R.id.equipo10nombre);
-                TextView equipo11nombre = (TextView) findViewById(R.id.equipo11nombre);
-                TextView equipo12nombre = (TextView) findViewById(R.id.equipo12nombre);
-                TextView equipo13nombre = (TextView) findViewById(R.id.equipo13nombre);
-                TextView equipo14nombre = (TextView) findViewById(R.id.equipo14nombre);
-                TextView equipo15nombre = (TextView) findViewById(R.id.equipo15nombre);
-                TextView equipo16nombre = (TextView) findViewById(R.id.equipo16nombre);
-                TextView equipo17nombre = (TextView) findViewById(R.id.equipo17nombre);
-                TextView equipo18nombre = (TextView) findViewById(R.id.equipo18nombre);
-                TextView equipo19nombre = (TextView) findViewById(R.id.equipo19nombre);
-                TextView equipo20nombre = (TextView) findViewById(R.id.equipo20nombre);
-*/
-                equipo1nombre.setText(dataSnapshot.child("equipos").child("eq01").getValue().toString());
-                equipo2nombre.setText(dataSnapshot.child("equipos").child("eq02").getValue().toString());
-                equipo3nombre.setText(dataSnapshot.child("equipos").child("eq03").getValue().toString());
-                puntos.setText(dataSnapshot.child("puntos").child("p1").getValue().toString());
-                partidosganados.setText(dataSnapshot.child("pg").child("g1").getValue().toString());
-                partidosperdidos.setText(dataSnapshot.child("pp").child("p1").getValue().toString());
+                TextView equipo4nombre = (TextView) view.findViewById(R.id.equipo4nombre);
+                TextView equipo5nombre = (TextView) view.findViewById(R.id.equipo5nombre);
+                TextView equipo6nombre = (TextView) view.findViewById(R.id.equipo6nombre);
+                TextView equipo7nombre = (TextView) view.findViewById(R.id.equipo7nombre);
+                TextView equipo8nombre = (TextView) view.findViewById(R.id.equipo8nombre);
+                TextView equipo9nombre = (TextView) view.findViewById(R.id.equipo9nombre);
+                TextView equipo10nombre = (TextView) view.findViewById(R.id.equipo10nombre);
+                TextView equipo11nombre = (TextView) view.findViewById(R.id.equipo11nombre);
+                TextView equipo12nombre = (TextView) view.findViewById(R.id.equipo12nombre);
+                TextView equipo13nombre = (TextView) view.findViewById(R.id.equipo13nombre);
+                TextView equipo14nombre = (TextView) view.findViewById(R.id.equipo14nombre);
+                TextView equipo15nombre = (TextView) view.findViewById(R.id.equipo15nombre);
+                TextView equipo16nombre = (TextView) view.findViewById(R.id.equipo16nombre);
+                TextView equipo17nombre = (TextView) view.findViewById(R.id.equipo17nombre);
+                TextView equipo18nombre = (TextView) view.findViewById(R.id.equipo18nombre);
+                TextView equipo19nombre = (TextView) view.findViewById(R.id.equipo19nombre);
+                TextView equipo20nombre = (TextView) view.findViewById(R.id.equipo20nombre);
+
+                equipo1nombre.setText(dataSnapshot.child("0").child("nom").getValue().toString());
+                equipo2nombre.setText(dataSnapshot.child("1").child("nom").getValue().toString());
+                equipo3nombre.setText(dataSnapshot.child("2").child("nom").getValue().toString());
+                puntos.setText(dataSnapshot.child("0").child("punts").getValue().toString());
+                partidosganados.setText(dataSnapshot.child("0").child("pg").getValue().toString());
+                partidosperdidos.setText(dataSnapshot.child("0").child("pp").getValue().toString());
                 /*
                 equipo4nombre.setText(dataSnapshot.child("eq04").getValue().toString());
                 equipo5nombre.setText(dataSnapshot.child("eq05").getValue().toString());

@@ -15,6 +15,9 @@ public class Equipo {
     private String pe;
     private List<Jugador> jugadorList;
 
+    public Equipo() {
+    }
+
     public Equipo(String nom, String punts, String pj, String pg, String pp, String pe, List<Jugador> jugadorList) {
         this.nom = nom;
         this.punts = punts;

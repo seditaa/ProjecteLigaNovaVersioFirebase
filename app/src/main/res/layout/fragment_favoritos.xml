@@ -15,26 +15,17 @@
         android:layout_marginLeft="11dp"
         android:layout_marginStart="11dp"
         android:layout_marginTop="26dp"
-        android:text="@string/añadirequipo"
+        android:text="@string/escogerequipo"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="26sp"
         android:textStyle="bold|italic" />
 
     <ListView
-        android:id="@+id/equiposañadidosfav"
+        android:id="@+id/equiposaescoger"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/botonañadir"
-        android:layout_width="75dp"
-        android:layout_height="60dp"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
-        android:text="Button"
-        tools:drawableBottom="@drawable/estrella" />
 </RelativeLayout>

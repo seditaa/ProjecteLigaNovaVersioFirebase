@@ -280,27 +280,30 @@ public DatabaseReference mDatabase;
         jugadorlist19.add(new Jugador("Placeres","1","1"));
         jugadorlist19.add(new Jugador("Castellano","0","2"));
 
+        List<Equipo> equipoList = new ArrayList<Equipo>();
 
-        mDatabase.child("Equipo01").setValue(new Equipo("Barcelona","48","18","15","0","3",jugadorlist));
-        mDatabase.child("Equipo02").setValue(new Equipo("Atlético","42","19","12","1","6",jugadorlist1));
-        mDatabase.child("Equipo03").setValue(new Equipo("Valencia","40","19","12","3","4",jugadorlist2));
-        mDatabase.child("Equipo04").setValue(new Equipo("Madrid","32","18","9","4","5",jugadorlist3));
-        mDatabase.child("Equipo05").setValue(new Equipo("Villarreal","31","19","9","6","4",jugadorlist4));
-        mDatabase.child("Equipo06").setValue(new Equipo("Sevilla","29","18","9","7","2",jugadorlist5));
-        mDatabase.child("Equipo07").setValue(new Equipo("Eibar","27","19","8","8","3",jugadorlist6));
-        mDatabase.child("Equipo08").setValue(new Equipo("Getafe","26","19","7","7","5",jugadorlist7));
-        mDatabase.child("Equipo09").setValue(new Equipo("Girona","26","19","7","7","5",jugadorlist8));
-        mDatabase.child("Equipo10").setValue(new Equipo("Ath. Club","24","18","6","6","6",jugadorlist9));
-        mDatabase.child("Equipo11").setValue(new Equipo("Leganés","24","17","7","7","3",jugadorlist10));
-        mDatabase.child("Equipo12").setValue(new Equipo("Betis","24","18","7","8","3",jugadorlist11));
-        mDatabase.child("Equipo13").setValue(new Equipo("Real Sociedad","23","18","6","7","5",jugadorlist12));
-        mDatabase.child("Equipo14").setValue(new Equipo("Espanyol","23","18","6","7","5",jugadorlist13));
-        mDatabase.child("Equipo15").setValue(new Equipo("Celta","22","18","6","8","4",jugadorlist14));
-        mDatabase.child("Equipo16").setValue(new Equipo("Levante","18","18","3","6","9",jugadorlist15));
-        mDatabase.child("Equipo17").setValue(new Equipo("Deportivo","16","19","4","11","4",jugadorlist16));
-        mDatabase.child("Equipo18").setValue(new Equipo("Alavés","15","18","5","13","0",jugadorlist17));
-        mDatabase.child("Equipo19").setValue(new Equipo("Málaga","11","19","3","14","2",jugadorlist18));
-        mDatabase.child("Equipo20").setValue(new Equipo("Las Palmas","11","19","3","14","2",jugadorlist19));
+        equipoList.add(new Equipo("FC Barcelona","51","19","16","0","3",jugadorlist));
+        equipoList.add(new Equipo("Atlético","42","19","12","1","6",jugadorlist1));
+        equipoList.add(new Equipo("Valencia","40","19","12","3","4",jugadorlist2));
+        equipoList.add(new Equipo("Madrid","32","18","9","4","5",jugadorlist3));
+        equipoList.add(new Equipo("Villarreal","31","19","9","6","4",jugadorlist4));
+        equipoList.add(new Equipo("Sevilla","29","18","9","7","2",jugadorlist5));
+        equipoList.add(new Equipo("Eibar","27","19","8","8","3",jugadorlist6));
+        equipoList.add(new Equipo("Getafe","26","19","7","7","5",jugadorlist7));
+        equipoList.add(new Equipo("Girona","26","19","7","7","5",jugadorlist8));
+        equipoList.add(new Equipo("Ath. Club","24","18","6","6","6",jugadorlist9));
+        equipoList.add(new Equipo("Leganés","24","17","7","7","3",jugadorlist10));
+        equipoList.add(new Equipo("Betis","24","18","7","8","3",jugadorlist11));
+        equipoList.add(new Equipo("Real Sociedad","23","18","6","7","5",jugadorlist12));
+        equipoList.add(new Equipo("Espanyol","23","18","6","7","5",jugadorlist13));
+        equipoList.add(new Equipo("Celta","22","18","6","8","4",jugadorlist14));
+        equipoList.add(new Equipo("Levante","18","18","3","6","9",jugadorlist15));
+        equipoList.add(new Equipo("Deportivo","16","19","4","11","4",jugadorlist16));
+        equipoList.add(new Equipo("Alavés","15","18","5","13","0",jugadorlist17));
+        equipoList.add(new Equipo("Málaga","11","19","3","14","2",jugadorlist18));
+        equipoList.add(new Equipo("Las Palmas","11","19","3","14","2",jugadorlist19));
+
+        mDatabase.setValue(new Equipos(equipoList));
 
 
     }
@@ -597,7 +600,7 @@ public DatabaseReference mDatabase;
 
 
         List<Partidos> plist22 = new ArrayList<Partidos>();
-        plist22.add(new Partidos("Villarreal","Alavés","-","0","11/02/2018","17.00"));
+        plist22.add(new Partidos("Villarreal","Alavés","-","-","11/02/2018","17.00"));
         plist22.add(new Partidos("Valencia","Levante","-","-","11/02/2018","17.00"));
         plist22.add(new Partidos("Sevilla", "Girona","-","-","11/02/2018","17.00"));
         plist22.add(new Partidos("Madrid","Real Sociedad","-","-","11/02/2018","17.00"));

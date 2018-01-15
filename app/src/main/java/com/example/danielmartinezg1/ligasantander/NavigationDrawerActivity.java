@@ -153,6 +153,11 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 PartidosFragment PartidosFragment = new PartidosFragment();
+                Bundle bundle = new Bundle();
+                String numJornada = new String();
+                numJornada="18";
+                bundle.putString("Jornada",numJornada);
+                PartidosFragment.setArguments(bundle);
                 fragmentTransaction = fragmentTransaction.replace(R.id.content_frame, PartidosFragment);
                 fragmentTransaction.commit();
 

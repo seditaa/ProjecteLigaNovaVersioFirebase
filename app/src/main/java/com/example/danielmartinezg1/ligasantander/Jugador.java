@@ -9,6 +9,9 @@ class Jugador {
     private String gols;
     private String asistencies;
 
+    public Jugador() {
+    }
+
     public Jugador(String nom, String gols, String asistencies) {
         this.nom = nom;
         this.gols = gols;

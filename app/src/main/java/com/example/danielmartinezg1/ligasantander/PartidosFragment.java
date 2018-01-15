@@ -43,6 +43,8 @@ public class PartidosFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         lv = (ListView) view.findViewById(R.id.match_list);
+        Bundle par = this.getArguments();
+        String jornada = par.getString("Jornada");
 
        // ItemClass  = new ArrayList<Partidos>();
         //ItemClass = obtenerItems();
@@ -52,7 +54,7 @@ public class PartidosFragment extends Fragment {
        // lv.setAdapter(adapter);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference().child("Jornadas").child("jornadas_list").child("0").child("partidos_list");
+        DatabaseReference myRef = database.getReference().child("Jornadas").child("jornadas_list").child(jornada).child("partidos_list");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -61,6 +63,7 @@ public class PartidosFragment extends Fragment {
                 ItemClass = dataSnapshot.getValue(t);
                 adapter = new ItemClasificacionAdapter(getActivity(), ItemClass);
                 lv.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
             }
 
             @Override

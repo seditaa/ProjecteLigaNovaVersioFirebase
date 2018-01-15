@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.danielmartinezg1.ligasantander.EquipoFavfragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ListView
+        android:id="@+id/listViewFav"
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/nombrejug"
+        android:layout_width="180dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/nombrejugadores"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/goles"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/goles"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/asistencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/assistencias"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ProjecteLigaNovaVersio.iml" filepath="$PROJECT_DIR$/ProjecteLigaNovaVersio.iml" />
-      <module fileurl="file://C:\Users\Dani\AndroidStudioProjects\ProjecteLigaNovaVersioAntiguo\ProjecteLigaNovaVersio.iml" filepath="C:\Users\Dani\AndroidStudioProjects\ProjecteLigaNovaVersioAntiguo\ProjecteLigaNovaVersio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjecteLigaNovaVersioFirebase.iml" filepath="$PROJECT_DIR$/ProjecteLigaNovaVersioFirebase.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
