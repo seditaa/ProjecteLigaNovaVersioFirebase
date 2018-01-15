@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#666666</color>
     <color name="colorAccent">#1850ec</color>
     <color name="colorTabla">#ffb677</color>
+    <color name="colorNav">#0077ff</color>
 
 </resources>

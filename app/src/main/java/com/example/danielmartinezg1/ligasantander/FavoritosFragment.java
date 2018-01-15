@@ -82,35 +82,11 @@ public class FavoritosFragment extends Fragment  {
             }
         });
 
-        listafavoritos.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View item, final int pos, long id) {
-                maybe_remove_item(pos);
-                return true;
-            }
-        });
-
-
-
         return view;
 
 
         }
 
-    private void maybe_remove_item(final int pos) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle(R.string.confirmation);
-        String question = getResources().getString(R.string.question);
-        builder.setMessage(question + " " + ItemClass.get(pos) + "?");
-        builder.setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                ItemClass.remove(pos);
-                adaptador.notifyDataSetChanged();
-            }
-        });
-        builder.setNegativeButton(android.R.string.cancel, null);
-        builder.create().show();
-    }
+
 
 }

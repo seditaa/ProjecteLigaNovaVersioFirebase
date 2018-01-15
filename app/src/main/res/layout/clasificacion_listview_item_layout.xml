@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/equipo1"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="25dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="15dp"
@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/equipo2"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="25dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
