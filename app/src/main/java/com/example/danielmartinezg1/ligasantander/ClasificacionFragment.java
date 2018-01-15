@@ -62,7 +62,23 @@ public class ClasificacionFragment extends Fragment {
                 equipo1nombre.setText(dataSnapshot.child("0").child("nom").getValue().toString());
                 equipo2nombre.setText(dataSnapshot.child("1").child("nom").getValue().toString());
                 equipo3nombre.setText(dataSnapshot.child("2").child("nom").getValue().toString());
-                //TODO:acabar de hacer setText de los nombres de los equipos de la misma manera que se hace con los 3 casos de arriba (equipo4nombre seria el siguiente)
+                equipo4nombre.setText(dataSnapshot.child("3").child("nom").getValue().toString());
+                equipo5nombre.setText(dataSnapshot.child("4").child("nom").getValue().toString());
+                equipo6nombre.setText(dataSnapshot.child("5").child("nom").getValue().toString());
+                equipo7nombre.setText(dataSnapshot.child("6").child("nom").getValue().toString());
+                equipo8nombre.setText(dataSnapshot.child("7").child("nom").getValue().toString());
+                equipo9nombre.setText(dataSnapshot.child("8").child("nom").getValue().toString());
+                equipo10nombre.setText(dataSnapshot.child("9").child("nom").getValue().toString());
+                equipo11nombre.setText(dataSnapshot.child("10").child("nom").getValue().toString());
+                equipo12nombre.setText(dataSnapshot.child("11").child("nom").getValue().toString());
+                equipo13nombre.setText(dataSnapshot.child("12").child("nom").getValue().toString());
+                equipo14nombre.setText(dataSnapshot.child("13").child("nom").getValue().toString());
+                equipo15nombre.setText(dataSnapshot.child("14").child("nom").getValue().toString());
+                equipo16nombre.setText(dataSnapshot.child("15").child("nom").getValue().toString());
+                equipo17nombre.setText(dataSnapshot.child("16").child("nom").getValue().toString());
+                equipo18nombre.setText(dataSnapshot.child("17").child("nom").getValue().toString());
+                equipo19nombre.setText(dataSnapshot.child("18").child("nom").getValue().toString());
+                equipo20nombre.setText(dataSnapshot.child("19").child("nom").getValue().toString());
 
                 //PUNTOS
                 TextView equipo1puntos = (TextView) view.findViewById(R.id.equipo1puntos);
@@ -88,26 +104,24 @@ public class ClasificacionFragment extends Fragment {
 
                 equipo1puntos.setText(dataSnapshot.child("0").child("punts").getValue().toString());
                 equipo2puntos.setText(dataSnapshot.child("1").child("punts").getValue().toString());
-                //TODO: actualizar los child de la misma manera que està hecho con equipos y los 2 ejemplos de arriba
-                equipo3puntos.setText(dataSnapshot.child("puntos").child("p3").getValue().toString());
-                equipo4puntos.setText(dataSnapshot.child("puntos").child("p4").getValue().toString());
-                equipo5puntos.setText(dataSnapshot.child("puntos").child("p5").getValue().toString());
-                equipo6puntos.setText(dataSnapshot.child("puntos").child("p6").getValue().toString());
-                equipo7puntos.setText(dataSnapshot.child("puntos").child("p7").getValue().toString());
-                equipo8puntos.setText(dataSnapshot.child("puntos").child("p8").getValue().toString());
-                equipo9puntos.setText(dataSnapshot.child("puntos").child("p9").getValue().toString());
-                equipo10puntos.setText(dataSnapshot.child("puntos").child("p10").getValue().toString());
-                equipo11puntos.setText(dataSnapshot.child("puntos").child("p11").getValue().toString());
-                equipo12puntos.setText(dataSnapshot.child("puntos").child("p12").getValue().toString());
-                equipo13puntos.setText(dataSnapshot.child("puntos").child("p13").getValue().toString());
-                equipo14puntos.setText(dataSnapshot.child("puntos").child("p14").getValue().toString());
-                equipo15puntos.setText(dataSnapshot.child("puntos").child("p15").getValue().toString());
-                equipo16puntos.setText(dataSnapshot.child("puntos").child("p16").getValue().toString());
-                equipo17puntos.setText(dataSnapshot.child("puntos").child("p17").getValue().toString());
-                equipo18puntos.setText(dataSnapshot.child("puntos").child("p18").getValue().toString());
-                equipo19puntos.setText(dataSnapshot.child("puntos").child("p19").getValue().toString());
-                equipo20puntos.setText(dataSnapshot.child("puntos").child("p20").getValue().toString());
-
+                equipo3puntos.setText(dataSnapshot.child("2").child("punts").getValue().toString());
+                equipo4puntos.setText(dataSnapshot.child("3").child("punts").getValue().toString());
+                equipo5puntos.setText(dataSnapshot.child("4").child("punts").getValue().toString());
+                equipo6puntos.setText(dataSnapshot.child("5").child("punts").getValue().toString());
+                equipo7puntos.setText(dataSnapshot.child("6").child("punts").getValue().toString());
+                equipo8puntos.setText(dataSnapshot.child("7").child("punts").getValue().toString());
+                equipo9puntos.setText(dataSnapshot.child("8").child("punts").getValue().toString());
+                equipo10puntos.setText(dataSnapshot.child("9").child("punts").getValue().toString());
+                equipo11puntos.setText(dataSnapshot.child("10").child("punts").getValue().toString());
+                equipo12puntos.setText(dataSnapshot.child("11").child("punts").getValue().toString());
+                equipo13puntos.setText(dataSnapshot.child("12").child("punts").getValue().toString());
+                equipo14puntos.setText(dataSnapshot.child("13").child("punts").getValue().toString());
+                equipo15puntos.setText(dataSnapshot.child("14").child("punts").getValue().toString());
+                equipo16puntos.setText(dataSnapshot.child("15").child("punts").getValue().toString());
+                equipo17puntos.setText(dataSnapshot.child("16").child("punts").getValue().toString());
+                equipo18puntos.setText(dataSnapshot.child("17").child("punts").getValue().toString());
+                equipo19puntos.setText(dataSnapshot.child("18").child("punts").getValue().toString());
+                equipo20puntos.setText(dataSnapshot.child("19").child("punts").getValue().toString());
 
                 //PARTIDOS GANADOS
                 TextView partidosganados1 = (TextView) view.findViewById(R.id.equipo1pg);
@@ -133,25 +147,24 @@ public class ClasificacionFragment extends Fragment {
 
                 partidosganados1.setText(dataSnapshot.child("0").child("pg").getValue().toString());
                 partidosganados2.setText(dataSnapshot.child("1").child("pg").getValue().toString());
-                //TODO: actualizar los child de la misma manera que està hecho con equipos y los 2 ejemplos de arriba
-                partidosganados3.setText(dataSnapshot.child("pg").child("g3").getValue().toString());
-                partidosganados4.setText(dataSnapshot.child("pg").child("g4").getValue().toString());
-                partidosganados5.setText(dataSnapshot.child("pg").child("g5").getValue().toString());
-                partidosganados6.setText(dataSnapshot.child("pg").child("g6").getValue().toString());
-                partidosganados7.setText(dataSnapshot.child("pg").child("g7").getValue().toString());
-                partidosganados8.setText(dataSnapshot.child("pg").child("g8").getValue().toString());
-                partidosganados9.setText(dataSnapshot.child("pg").child("g9").getValue().toString());
-                partidosganados10.setText(dataSnapshot.child("pg").child("g10").getValue().toString());
-                partidosganados11.setText(dataSnapshot.child("pg").child("g11").getValue().toString());
-                partidosganados12.setText(dataSnapshot.child("pg").child("g12").getValue().toString());
-                partidosganados13.setText(dataSnapshot.child("pg").child("g13").getValue().toString());
-                partidosganados14.setText(dataSnapshot.child("pg").child("g14").getValue().toString());
-                partidosganados15.setText(dataSnapshot.child("pg").child("g15").getValue().toString());
-                partidosganados16.setText(dataSnapshot.child("pg").child("g16").getValue().toString());
-                partidosganados17.setText(dataSnapshot.child("pg").child("g17").getValue().toString());
-                partidosganados18.setText(dataSnapshot.child("pg").child("g18").getValue().toString());
-                partidosganados19.setText(dataSnapshot.child("pg").child("g19").getValue().toString());
-                partidosganados20.setText(dataSnapshot.child("pg").child("g20").getValue().toString());
+                partidosganados3.setText(dataSnapshot.child("2").child("pg").getValue().toString());
+                partidosganados4.setText(dataSnapshot.child("3").child("pg").getValue().toString());
+                partidosganados5.setText(dataSnapshot.child("4").child("pg").getValue().toString());
+                partidosganados6.setText(dataSnapshot.child("5").child("pg").getValue().toString());
+                partidosganados7.setText(dataSnapshot.child("6").child("pg").getValue().toString());
+                partidosganados8.setText(dataSnapshot.child("7").child("pg").getValue().toString());
+                partidosganados9.setText(dataSnapshot.child("8").child("pg").getValue().toString());
+                partidosganados10.setText(dataSnapshot.child("9").child("pg").getValue().toString());
+                partidosganados11.setText(dataSnapshot.child("10").child("pg").getValue().toString());
+                partidosganados12.setText(dataSnapshot.child("11").child("pg").getValue().toString());
+                partidosganados13.setText(dataSnapshot.child("12").child("pg").getValue().toString());
+                partidosganados14.setText(dataSnapshot.child("13").child("pg").getValue().toString());
+                partidosganados15.setText(dataSnapshot.child("14").child("pg").getValue().toString());
+                partidosganados16.setText(dataSnapshot.child("15").child("pg").getValue().toString());
+                partidosganados17.setText(dataSnapshot.child("16").child("pg").getValue().toString());
+                partidosganados18.setText(dataSnapshot.child("17").child("pg").getValue().toString());
+                partidosganados19.setText(dataSnapshot.child("18").child("pg").getValue().toString());
+                partidosganados20.setText(dataSnapshot.child("19").child("pg").getValue().toString());
 
                 //PARTIDOS PERDIDOS
                 TextView partidosperdidos1 = (TextView) view.findViewById(R.id.equipo1pp);
@@ -177,25 +190,24 @@ public class ClasificacionFragment extends Fragment {
 
                 partidosperdidos1.setText(dataSnapshot.child("0").child("pp").getValue().toString());
                 partidosperdidos2.setText(dataSnapshot.child("1").child("pp").getValue().toString());
-                //TODO: actualizar los child de la misma manera que està hecho con equipos y los 2 ejemplos de arriba
-                partidosperdidos3.setText(dataSnapshot.child("pp").child("p3").getValue().toString());
-                partidosperdidos4.setText(dataSnapshot.child("pp").child("p4").getValue().toString());
-                partidosperdidos5.setText(dataSnapshot.child("pp").child("p5").getValue().toString());
-                partidosperdidos6.setText(dataSnapshot.child("pp").child("p6").getValue().toString());
-                partidosperdidos7.setText(dataSnapshot.child("pp").child("p7").getValue().toString());
-                partidosperdidos8.setText(dataSnapshot.child("pp").child("p8").getValue().toString());
-                partidosperdidos9.setText(dataSnapshot.child("pp").child("p9").getValue().toString());
-                partidosperdidos10.setText(dataSnapshot.child("pp").child("p10").getValue().toString());
-                partidosperdidos11.setText(dataSnapshot.child("pp").child("p11").getValue().toString());
-                partidosperdidos12.setText(dataSnapshot.child("pp").child("p12").getValue().toString());
-                partidosperdidos13.setText(dataSnapshot.child("pp").child("p13").getValue().toString());
-                partidosperdidos14.setText(dataSnapshot.child("pp").child("p14").getValue().toString());
-                partidosperdidos15.setText(dataSnapshot.child("pp").child("p15").getValue().toString());
-                partidosperdidos16.setText(dataSnapshot.child("pp").child("p16").getValue().toString());
-                partidosperdidos17.setText(dataSnapshot.child("pp").child("p17").getValue().toString());
-                partidosperdidos18.setText(dataSnapshot.child("pp").child("p18").getValue().toString());
-                partidosperdidos19.setText(dataSnapshot.child("pp").child("p19").getValue().toString());
-                partidosperdidos20.setText(dataSnapshot.child("pp").child("p20").getValue().toString());
+                partidosperdidos3.setText(dataSnapshot.child("2").child("pp").getValue().toString());
+                partidosperdidos4.setText(dataSnapshot.child("3").child("pp").getValue().toString());
+                partidosperdidos5.setText(dataSnapshot.child("4").child("pp").getValue().toString());
+                partidosperdidos6.setText(dataSnapshot.child("5").child("pp").getValue().toString());
+                partidosperdidos7.setText(dataSnapshot.child("6").child("pp").getValue().toString());
+                partidosperdidos8.setText(dataSnapshot.child("7").child("pp").getValue().toString());
+                partidosperdidos9.setText(dataSnapshot.child("8").child("pp").getValue().toString());
+                partidosperdidos10.setText(dataSnapshot.child("9").child("pp").getValue().toString());
+                partidosperdidos11.setText(dataSnapshot.child("10").child("pp").getValue().toString());
+                partidosperdidos12.setText(dataSnapshot.child("11").child("pp").getValue().toString());
+                partidosperdidos13.setText(dataSnapshot.child("12").child("pp").getValue().toString());
+                partidosperdidos14.setText(dataSnapshot.child("13").child("pp").getValue().toString());
+                partidosperdidos15.setText(dataSnapshot.child("14").child("pp").getValue().toString());
+                partidosperdidos16.setText(dataSnapshot.child("15").child("pp").getValue().toString());
+                partidosperdidos17.setText(dataSnapshot.child("16").child("pp").getValue().toString());
+                partidosperdidos18.setText(dataSnapshot.child("17").child("pp").getValue().toString());
+                partidosperdidos19.setText(dataSnapshot.child("18").child("pp").getValue().toString());
+                partidosperdidos20.setText(dataSnapshot.child("19").child("pp").getValue().toString());
 
                 //PARTIDOS EMPATADOS
                 TextView partidosempatados1 = (TextView) view.findViewById(R.id.equipo1pe);
@@ -221,25 +233,24 @@ public class ClasificacionFragment extends Fragment {
 
                 partidosempatados1.setText(dataSnapshot.child("0").child("pe").getValue().toString());
                 partidosempatados2.setText(dataSnapshot.child("1").child("pe").getValue().toString());
-                //TODO: actualizar los child de la misma manera que està hecho con equipos y los 2 ejemplos de arriba
-                partidosempatados3.setText(dataSnapshot.child("pe").child("e3").getValue().toString());
-                partidosempatados4.setText(dataSnapshot.child("pe").child("e4").getValue().toString());
-                partidosempatados5.setText(dataSnapshot.child("pe").child("e5").getValue().toString());
-                partidosempatados6.setText(dataSnapshot.child("pe").child("e6").getValue().toString());
-                partidosempatados7.setText(dataSnapshot.child("pe").child("e7").getValue().toString());
-                partidosempatados8.setText(dataSnapshot.child("pe").child("e8").getValue().toString());
-                partidosempatados9.setText(dataSnapshot.child("pe").child("e9").getValue().toString());
-                partidosempatados10.setText(dataSnapshot.child("pe").child("e10").getValue().toString());
-                partidosempatados11.setText(dataSnapshot.child("pe").child("e11").getValue().toString());
-                partidosempatados12.setText(dataSnapshot.child("pe").child("e12").getValue().toString());
-                partidosempatados13.setText(dataSnapshot.child("pe").child("e13").getValue().toString());
-                partidosempatados14.setText(dataSnapshot.child("pe").child("e14").getValue().toString());
-                partidosempatados15.setText(dataSnapshot.child("pe").child("e15").getValue().toString());
-                partidosempatados16.setText(dataSnapshot.child("pe").child("e16").getValue().toString());
-                partidosempatados17.setText(dataSnapshot.child("pe").child("e17").getValue().toString());
-                partidosempatados18.setText(dataSnapshot.child("pe").child("e18").getValue().toString());
-                partidosempatados19.setText(dataSnapshot.child("pe").child("e19").getValue().toString());
-                partidosempatados20.setText(dataSnapshot.child("pe").child("e20").getValue().toString());
+                partidosempatados3.setText(dataSnapshot.child("2").child("pe").getValue().toString());
+                partidosempatados4.setText(dataSnapshot.child("3").child("pe").getValue().toString());
+                partidosempatados5.setText(dataSnapshot.child("4").child("pe").getValue().toString());
+                partidosempatados6.setText(dataSnapshot.child("5").child("pe").getValue().toString());
+                partidosempatados7.setText(dataSnapshot.child("6").child("pe").getValue().toString());
+                partidosempatados8.setText(dataSnapshot.child("7").child("pe").getValue().toString());
+                partidosempatados9.setText(dataSnapshot.child("8").child("pe").getValue().toString());
+                partidosempatados10.setText(dataSnapshot.child("9").child("pe").getValue().toString());
+                partidosempatados11.setText(dataSnapshot.child("10").child("pe").getValue().toString());
+                partidosempatados12.setText(dataSnapshot.child("11").child("pe").getValue().toString());
+                partidosempatados13.setText(dataSnapshot.child("12").child("pe").getValue().toString());
+                partidosempatados14.setText(dataSnapshot.child("13").child("pe").getValue().toString());
+                partidosempatados15.setText(dataSnapshot.child("14").child("pe").getValue().toString());
+                partidosempatados16.setText(dataSnapshot.child("15").child("pe").getValue().toString());
+                partidosempatados17.setText(dataSnapshot.child("16").child("pe").getValue().toString());
+                partidosempatados18.setText(dataSnapshot.child("17").child("pe").getValue().toString());
+                partidosempatados19.setText(dataSnapshot.child("18").child("pe").getValue().toString());
+                partidosempatados20.setText(dataSnapshot.child("19").child("pe").getValue().toString());
 
             }
 

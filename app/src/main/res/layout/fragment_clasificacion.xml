@@ -1,523 +1,745 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tableLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorTabla"
     android:shrinkColumns="*"
     android:stretchColumns="*">
+
     <TableRow
         android:id="@+id/FilaTitulo"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/TituloTabla"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:typeface="serif"
-            android:textSize="18dp"
-            android:text="@string/Clasificacion"
+            android:layout_span="6"
+            android:background="?attr/colorPrimaryDark"
             android:gravity="center"
-            android:layout_span="6"></TextView>
+            android:hapticFeedbackEnabled="false"
+            android:text="@string/Clasificacion"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="serif"></TextView>
     </TableRow>
+
     <TableRow
         android:id="@+id/Titulos"
-        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:background="@android:color/darker_gray"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipos"
             android:gravity="center_horizontal"
-            android:text="@string/equipos"></TextView>
+            android:text="@string/equipos"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/puntos"
+            android:gravity="center_horizontal"
             android:text="@string/puntos"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="serif"></TextView>
+
         <TextView
             android:id="@+id/partidosganados"
+            android:gravity="center_horizontal"
             android:text="@string/partidosganados"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="serif"></TextView>
+
         <TextView
             android:id="@+id/partidosperdidos"
+            android:gravity="center_horizontal"
             android:text="@string/partidosperdidos"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="serif"></TextView>
+
         <TextView
             android:id="@+id/partidosempatados"
+            android:gravity="center_horizontal"
             android:text="@string/partidosempatados"
-            android:textStyle="bold"
-            android:typeface="serif"></TextView>
-        <TextView
-            android:id="@+id/partidosjugados"
-            android:text="@string/partidosjugados"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="serif"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTabla"
         android:gravity="center_horizontal"
-        android:layout_width="match_parent">
+        android:scrollbarSize="18dp">
+
         <TextView
             android:id="@+id/equipo1nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo1puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo1pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo1pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo1pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo1pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo2"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo2nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo2puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo2pg"
             android:gravity="center_horizontal"></TextView>
+
         <TextView
             android:id="@+id/equipo2pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo2pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo2pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo3"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo3nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo3puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo3pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo3pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo3pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo3pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo4"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo4nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo4puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo4pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo4pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo4pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo4pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo5"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo5nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo5puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo5pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo5pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo5pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo5pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo6"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo6nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo6puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo6pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo6pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo6pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo6pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo7"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo7nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo7puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo7pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo7pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo7pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo7pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo8"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo8nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo8puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo8pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo8pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo8pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo8pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo9"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo9nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo9puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo9pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo9pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo9pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo9pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo10"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
 
         <TextView
             android:id="@+id/equipo10nombre"
             android:layout_height="match_parent"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo10puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo10pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo10pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo10pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo10pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo11"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo11nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo11puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo11pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo11pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo11pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo11pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo12"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo12nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo12puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo12pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo12pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo12pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo12pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo13"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo13nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo13puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo13pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo13pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo13pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo13pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo14"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo14nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo14puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo14pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo14pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo14pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo14pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo15"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo15nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo15puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo15pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo15pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo15pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo15pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo16"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo16nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo16puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo16pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo16pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo16pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo16pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo17"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo17nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo17puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo17pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo17pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo17pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo17pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo18"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo18nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo18puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo18pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo18pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo18pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo18pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo19"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo19nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo19puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo19pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo19pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo19pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo19pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
+
     <TableRow
-        android:layout_height="wrap_content"
         android:id="@+id/equipo20"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTabla"
+        android:gravity="center_horizontal">
+
         <TextView
             android:id="@+id/equipo20nombre"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
+
         <TextView
             android:id="@+id/equipo20puntos"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo20pg"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo20pp"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
+
         <TextView
             android:id="@+id/equipo20pe"
-            android:gravity="center_horizontal"></TextView>
-        <TextView
-            android:id="@+id/equipo20pj"
-            android:gravity="center_horizontal"></TextView>
+            android:gravity="center_horizontal"
+            android:textSize="18sp"></TextView>
     </TableRow>
 
 

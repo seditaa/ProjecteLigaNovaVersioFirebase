@@ -27,13 +27,15 @@
     <string name="textobotonfav">Añadir</string>
     <string name="escogerequipo">Escoge un equipo</string>
     <string name="TituloCalendario">Escoge la jornada</string>
-    <string name="nombrejugadores">Nombre de los jugadores</string>
+    <string name="nombrejugadores">Jugadores destacados</string>
     <string name="goles">Goles</string>
     <string name="assistencias">Asistencias</string>
     <string name="Informacionequipo">Información equipo</string>
     <string name="confirmation">Borrar</string>
     <string name="question">Seguro que quieres borrarlo?</string>
     <string name="delete">Borrar</string>
+    <string name="nombre_jugador">Nombre del Jugador</string>
+    <string name="goleador">Goleador</string>
 
     <!--Array con los valores de la cabecera de la tabla-->
     <string-array name="cabecera_tabla">

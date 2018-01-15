@@ -10,37 +10,43 @@
     <ListView
         android:id="@+id/listViewFav"
         android:layout_width="wrap_content"
-        android:layout_height="460dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true" />
+        android:layout_height="600dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/goles"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/nombrejug"
-        android:layout_width="180dp"
+        android:layout_width="190dp"
         android:layout_height="35dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:text="@string/nombrejugadores"
-        android:textSize="16sp" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/goles"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="220dp"
+        android:layout_marginLeft="205dp"
         android:layout_marginTop="10dp"
         android:text="@string/goles"
-        android:textSize="16sp" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/asistencias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="290dp"
+        android:layout_marginLeft="280dp"
         android:layout_marginTop="10dp"
         android:text="@string/assistencias"
-        android:textSize="16sp" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

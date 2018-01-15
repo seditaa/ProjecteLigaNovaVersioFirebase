@@ -23,8 +23,31 @@ public DatabaseReference mDatabase;
 
         actualizaJornadasPartidos();
         actualizaEquipo();
+        actualizaPichichi();
 
         return view;
+    }
+
+    private void actualizaPichichi() {
+        mDatabase = FirebaseDatabase.getInstance().getReference("Pichichis");
+
+        List<Jugador> pichichi_list = new ArrayList<Jugador>();
+
+        pichichi_list.add(new Jugador("Messi","17","7"));
+        pichichi_list.add(new Jugador("L.Suárez","13","1"));
+        pichichi_list.add(new Jugador("Yago Aspas","11","2"));
+        pichichi_list.add(new Jugador("Zaza","10","2"));
+        pichichi_list.add(new Jugador("Bakambú","9","2"));
+        pichichi_list.add(new Jugador("Stuani","9","6"));
+        pichichi_list.add(new Jugador("Maxi Gomez","9","2"));
+        pichichi_list.add(new Jugador("Rodrigo","9","1"));
+        pichichi_list.add(new Jugador("Paulinho","8","0"));
+        pichichi_list.add(new Jugador("G.Moreno","8","0"));
+        pichichi_list.add(new Jugador("Willian José","8","1"));
+        pichichi_list.add(new Jugador("Aduriz","7","5"));
+        pichichi_list.add(new Jugador("Sanabria","7","1"));
+
+        mDatabase.setValue(new Pichichis_list(pichichi_list));
     }
 
     private void actualizaEquipo() {
@@ -32,7 +55,7 @@ public DatabaseReference mDatabase;
 
         List<Jugador> jugadorlist = new ArrayList<Jugador>();
 
-        jugadorlist.add(new Jugador("Messi","16","7"));
+        jugadorlist.add(new Jugador("Messi","17","7"));
         jugadorlist.add(new Jugador("L.Suárez","11","1"));
         jugadorlist.add(new Jugador("Paulinho","7","2"));
         jugadorlist.add(new Jugador("P.Alcácer","2","2"));
