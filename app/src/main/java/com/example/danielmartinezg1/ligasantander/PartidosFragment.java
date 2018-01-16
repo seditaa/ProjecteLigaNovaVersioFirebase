@@ -28,37 +28,32 @@ import static android.content.ContentValues.TAG;
 
 
 public class PartidosFragment extends Fragment {
-
     private List<Partidos> ItemClass;
-    public DatabaseReference mDatabase;
-    public ValueEventListener eventListener;
     private ListView lv;
     private ItemClasificacionAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflem el layout del fragment
         View view = inflater.inflate(R.layout.fragment_partidos, container, false);
         getActivity().setTitle(R.string.partidos);
         super.onCreate(savedInstanceState);
 
         lv = (ListView) view.findViewById(R.id.match_list);
+        //Rebem el bundle provinent de CalendarFragment i de NavigationDrawerActivity
         Bundle par = this.getArguments();
         String jornada = par.getString("Jornada");
 
-       // ItemClass  = new ArrayList<Partidos>();
-        //ItemClass = obtenerItems();
-       // ItemClasificacionAdapter adapter = new ItemClasificacionAdapter(getActivity(), ItemClass) {
-        //};
-
-       // lv.setAdapter(adapter);
-
+        //Establim la referencia a la base de dades de Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Jornadas").child("jornadas_list").child(jornada).child("partidos_list");
 
+        //Detectem qualsevol canvi en el servidor
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                //Creem la llista amb les dades i apliquem l'adaptador personalitzat creat anteriorment
+                //(ItemClasificaionAdapter)
                 GenericTypeIndicator<List<Partidos>> t = new GenericTypeIndicator<List<Partidos>>() {};
                 ItemClass = dataSnapshot.getValue(t);
                 adapter = new ItemClasificacionAdapter(getActivity(), ItemClass);
@@ -68,26 +63,13 @@ public class PartidosFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError error) {
-                // Failed to read value
+                // Error al llegir valors
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
 
         return view;
     }
-
-    /*private ArrayList<Partidos> obtenerItems() {
-        Log.i("Dani","he llegado");
-
-        ArrayList<Partidos> items = new ArrayList<Partidos>();
-
-        items.add(new Partidos("bfsbfbf","barça", "aldn", "10", "5", "Patatas"));
-
-        items.add(new Partidos("jslvnkjsvn","madri", "Naranja", "1",
-                "1", "hoy"));
-
-        return items;
-    }*/
 }
 
 

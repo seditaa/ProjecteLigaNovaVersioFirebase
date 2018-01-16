@@ -5,8 +5,9 @@ import java.util.List;
 /**
  * Created by Dani on 12/01/2018.
  */
-
+//CREACIÓ DE LA CLASSE EQUIPO AMB L'ESTRUCTURA DESSITJADA A LA BASE DE DADES
 public class Equipo {
+    //Dades que haurà de tenir cada equip
     private String nom;
     private String punts;
     private String pj;
@@ -15,9 +16,11 @@ public class Equipo {
     private String pe;
     private List<Jugador> jugadorList;
 
+    //Constructor buit
     public Equipo() {
     }
 
+    //Contstructor
     public Equipo(String nom, String punts, String pj, String pg, String pp, String pe, List<Jugador> jugadorList) {
         this.nom = nom;
         this.punts = punts;
@@ -28,6 +31,7 @@ public class Equipo {
         this.jugadorList = jugadorList;
     }
 
+    //Getters
     public String getNom() {
         return nom;
     }

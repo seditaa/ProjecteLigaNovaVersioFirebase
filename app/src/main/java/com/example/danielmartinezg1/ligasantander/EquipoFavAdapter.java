@@ -14,12 +14,12 @@ import java.util.List;
 /**
  * Created by Dani on 14/01/2018.
  */
-
+//ADAPTADOR PERSONALITZAT PER CONFIGURAR UN NOU MODEL DE LISTVIEW
 public class EquipoFavAdapter extends BaseAdapter{
-
     protected EquipoFavfragment fragment;
     protected ArrayList<Jugador> items;
 
+    //Constructor
     public EquipoFavAdapter(EquipoFavfragment fragment, ArrayList<Jugador> items) {
         this.fragment = fragment;
         this.items = items;
@@ -28,11 +28,13 @@ public class EquipoFavAdapter extends BaseAdapter{
     Context contextFav;
     List<Jugador> ItemClassFav;
 
+    //Constructor
     public EquipoFavAdapter(Context contextFav, List<Jugador> itemClassCFav) {
         this.contextFav = contextFav;
         ItemClassFav = itemClassCFav;
     }
 
+    //Getters
     @Override
     public int getCount() {
         return ItemClassFav.size();
@@ -48,6 +50,7 @@ public class EquipoFavAdapter extends BaseAdapter{
         return ItemClassFav.indexOf(getItem(position));
     }
 
+    //Métode getView on inflem el nou layout de l'item al ListView dessitjat
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
@@ -60,17 +63,11 @@ public class EquipoFavAdapter extends BaseAdapter{
         TextView goles = (TextView) convertView.findViewById(R.id.golsjugador);
         TextView assist = (TextView) convertView.findViewById(R.id.assistenciesjugador);
 
-
         Jugador row_pos = ItemClassFav.get(position);
-        // setting the image resource and title
-
 
         nombrejugador.setText(row_pos.getNom());
         goles.setText(row_pos.getGols());
         assist.setText(row_pos.getAsistencies());
-
-
-
 
         return convertView;
     }

@@ -24,26 +24,26 @@ import static android.content.ContentValues.TAG;
 
 public class CalendarFragment extends Fragment {
     private List<JornadasList> ItemClass;
-    public DatabaseReference mDatabase;
-    public ValueEventListener eventListener;
     private  ListView listcalendar;
     private CalendarAdapter adaptador;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        // Inflate the layout for this fragment
+        // Inflem el layout per aquest fragment
       View view = inflater.inflate(R.layout.fragment_calendar, container, false);
-
         getActivity().setTitle(R.string.calendario);
 
         listcalendar = (ListView) view.findViewById(R.id.listViewFav);
 
+        //Referenciem el nostre servidor a Firebase, informant on està la informació a la que ha de accedir
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Jornadas").child("jornadas_list");
 
+        //Detectem els canvis produits a la referència
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                //Creem la llista amb les dades i apliquem l'adaptador personalitzat creat anteriorment
+                //(CalendarAdapter)
                 GenericTypeIndicator<List<JornadasList>> t = new GenericTypeIndicator<List<JornadasList>>() {};
                 ItemClass = dataSnapshot.getValue(t);
                 adaptador = new CalendarAdapter(getActivity(), ItemClass);
@@ -53,7 +53,7 @@ public class CalendarFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError error) {
-                // Failed to read value
+                // Error al llegir els valors
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
@@ -62,17 +62,18 @@ public class CalendarFragment extends Fragment {
         listcalendar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,  int position, long id) {
-        //aqui va el codigo para cuando cliques t mande a la jornada que quieres ver
+                //Comunicació entre fragments per mostrar els partits de la jornada dessitjada
                 FragmentManager fragmentManager;
                 FragmentTransaction fragmentTransaction;
                 fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 PartidosFragment PartidosFragment = new PartidosFragment();
-
+                //Creació del Bundle i introducció del número de jornada que es vol visualitzar
                 Bundle bundle = new Bundle();
                 String numJornada = Integer.toString(position);
                 bundle.putString("Jornada",numJornada);
                 PartidosFragment.setArguments(bundle);
+                //Comunicació amb el fragment PartidosFragment per obrir la jornada sel·leccionada
                 fragmentTransaction = fragmentTransaction.replace(R.id.content_frame, PartidosFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();

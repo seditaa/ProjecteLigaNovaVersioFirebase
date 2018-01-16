@@ -3,7 +3,7 @@ package com.example.danielmartinezg1.ligasantander;
 /**
  * Created by Dani on 12/01/2018.
  */
-
+//CREACIÓ DE LA CLASSE PARTIDOS AMB L'ESTRUCTURA DESSITJADA A LA BASE DE DADES
 class Partidos {
     private String equipo1;
     private String equipo2;
@@ -12,14 +12,11 @@ class Partidos {
     private String dia;
     private String hora;
 
+    //Constructor buit
     public Partidos() {
     }
 
-    public Partidos(int resultado1, int resultado2) {
-        resultado1 = 0;
-        resultado2 = 0;
-    }
-
+    //Constructor
     public Partidos(String equipo1, String equipo2, String resultado1, String resultado2, String dia, String hora) {
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
@@ -29,6 +26,7 @@ class Partidos {
         this.hora = hora;
     }
 
+    //Getters
     public String getEquipo1() {
         return equipo1;
     }

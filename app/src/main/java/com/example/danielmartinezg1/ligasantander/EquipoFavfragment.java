@@ -22,28 +22,30 @@ import static android.content.ContentValues.TAG;
 
 public class EquipoFavfragment extends Fragment {
     private List<Jugador> ItemClass;
-    public DatabaseReference mDatabase;
-    public ValueEventListener eventListener;
     private  ListView listajugadores;
     private EquipoFavAdapter adaptador;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
+        // Imflem el layout d'aquest fragment
         View view = inflater.inflate(R.layout.fragment_equipo_favfragment, container, false);
-
         getActivity().setTitle(R.string.Informacionequipo);
+
+        //Es recull el paràmetre provinent del fragment FavoritosFragment i es converteix en string
         Bundle parametro = this.getArguments();
         String equipo = parametro.getString("equipo");
 
         listajugadores = (ListView) view.findViewById(R.id.listViewFav);
 
+        //Creem la referencia al Database de Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Equipos").child("equipo_list").child(equipo).child("jugadorList");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                //Creem la llista amb les dades i apliquem l'adaptador personalitzat creat anteriorment
+                //(EquipoFavAdapter)
                 GenericTypeIndicator<List<Jugador>> t = new GenericTypeIndicator<List<Jugador>>() {};
                 ItemClass = dataSnapshot.getValue(t);
                 adaptador = new EquipoFavAdapter(getActivity(), ItemClass);
@@ -52,7 +54,7 @@ public class EquipoFavfragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError error) {
-                // Failed to read value
+                // Error al llegir els valors
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });

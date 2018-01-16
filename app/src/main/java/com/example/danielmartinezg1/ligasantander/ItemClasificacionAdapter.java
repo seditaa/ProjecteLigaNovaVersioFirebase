@@ -16,25 +16,27 @@ import java.util.List;
 /**
  * Created by Dani on 12/01/2018.
  */
-
+//ADAPTADOR PERSONALITZAT PER CONFIGURAR UN NOU MODEL DE LISTVIEW
 public class ItemClasificacionAdapter extends BaseAdapter {
-
     protected PartidosFragment fragment;
     protected ArrayList<Partidos> items;
 
-
+    //Constructor
     public ItemClasificacionAdapter(PartidosFragment fragment, ArrayList<Partidos> items) {
         this.fragment = fragment;
         this.items = items;
     }
 
-
     Context context;
     List<Partidos> ItemClass;
+
+    //Constructor
     ItemClasificacionAdapter(Context context, List<Partidos> ItemClass) {
         this.context = context;
         this.ItemClass = ItemClass;
     }
+
+    //Getters
     @Override
     public int getCount() {
 
@@ -51,6 +53,7 @@ public class ItemClasificacionAdapter extends BaseAdapter {
         return ItemClass.indexOf(getItem(position));
     }
 
+    //Métode getView on inflem el nou layout de l'item al ListView dessitjat
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
@@ -67,8 +70,6 @@ public class ItemClasificacionAdapter extends BaseAdapter {
         TextView hora = (TextView) convertView.findViewById(R.id.hora);
 
         Partidos row_pos = ItemClass.get(position);
-        // setting the image resource and title
-
 
         equipo1.setText(row_pos.getEquipo1());
         equipo2.setText(row_pos.getEquipo2());
@@ -76,7 +77,6 @@ public class ItemClasificacionAdapter extends BaseAdapter {
         resultado2.setText(row_pos.getResultado2());
         dia.setText(row_pos.getDia());
         hora.setText(row_pos.getHora());
-
 
         return convertView;
     }

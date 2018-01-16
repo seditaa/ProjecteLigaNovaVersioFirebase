@@ -28,16 +28,17 @@ public class ClasificacionFragment extends Fragment {
     public ValueEventListener eventListener;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflem el layout per aquest fragment
         final View view = inflater.inflate(R.layout.fragment_clasificacion, container, false);
-
         getActivity().setTitle(R.string.Clasificacion);
 
+        //Fem referencia al servidor de Firebase al repositori dessitjat
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Equipos").child("equipo_list");
+        //Detectem qualsevol canvi al servidor
         eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                //EQUIPOS
+                //Declaració dels TextViews referents als noms dels equips
                 TextView equipo1nombre = (TextView) view.findViewById(R.id.equipo1nombre);
                 TextView equipo2nombre = (TextView) view.findViewById(R.id.equipo2nombre);
                 TextView equipo3nombre = (TextView) view.findViewById(R.id.equipo3nombre);
@@ -59,6 +60,7 @@ public class ClasificacionFragment extends Fragment {
                 TextView equipo19nombre = (TextView) view.findViewById(R.id.equipo19nombre);
                 TextView equipo20nombre = (TextView) view.findViewById(R.id.equipo20nombre);
 
+                //Introducció de les dades del servidor a cada TextView
                 equipo1nombre.setText(dataSnapshot.child("0").child("nom").getValue().toString());
                 equipo2nombre.setText(dataSnapshot.child("1").child("nom").getValue().toString());
                 equipo3nombre.setText(dataSnapshot.child("2").child("nom").getValue().toString());
@@ -80,7 +82,7 @@ public class ClasificacionFragment extends Fragment {
                 equipo19nombre.setText(dataSnapshot.child("18").child("nom").getValue().toString());
                 equipo20nombre.setText(dataSnapshot.child("19").child("nom").getValue().toString());
 
-                //PUNTOS
+                //Declaració dels TextViews referents als punts dels equips
                 TextView equipo1puntos = (TextView) view.findViewById(R.id.equipo1puntos);
                 TextView equipo2puntos = (TextView) view.findViewById(R.id.equipo2puntos);
                 TextView equipo3puntos = (TextView) view.findViewById(R.id.equipo3puntos);
@@ -102,6 +104,7 @@ public class ClasificacionFragment extends Fragment {
                 TextView equipo19puntos = (TextView) view.findViewById(R.id.equipo19puntos);
                 TextView equipo20puntos = (TextView) view.findViewById(R.id.equipo20puntos);
 
+                //Introducció de les dades del servidor a cada TextView
                 equipo1puntos.setText(dataSnapshot.child("0").child("punts").getValue().toString());
                 equipo2puntos.setText(dataSnapshot.child("1").child("punts").getValue().toString());
                 equipo3puntos.setText(dataSnapshot.child("2").child("punts").getValue().toString());
@@ -123,7 +126,7 @@ public class ClasificacionFragment extends Fragment {
                 equipo19puntos.setText(dataSnapshot.child("18").child("punts").getValue().toString());
                 equipo20puntos.setText(dataSnapshot.child("19").child("punts").getValue().toString());
 
-                //PARTIDOS GANADOS
+                //Declaració dels TextViews referents als partits guanyats dels equips
                 TextView partidosganados1 = (TextView) view.findViewById(R.id.equipo1pg);
                 TextView partidosganados2 = (TextView) view.findViewById(R.id.equipo2pg);
                 TextView partidosganados3 = (TextView) view.findViewById(R.id.equipo3pg);
@@ -145,6 +148,7 @@ public class ClasificacionFragment extends Fragment {
                 TextView partidosganados19 = (TextView) view.findViewById(R.id.equipo19pg);
                 TextView partidosganados20 = (TextView) view.findViewById(R.id.equipo20pg);
 
+                //Introducció de les dades del servidor a cada TextView
                 partidosganados1.setText(dataSnapshot.child("0").child("pg").getValue().toString());
                 partidosganados2.setText(dataSnapshot.child("1").child("pg").getValue().toString());
                 partidosganados3.setText(dataSnapshot.child("2").child("pg").getValue().toString());
@@ -166,7 +170,7 @@ public class ClasificacionFragment extends Fragment {
                 partidosganados19.setText(dataSnapshot.child("18").child("pg").getValue().toString());
                 partidosganados20.setText(dataSnapshot.child("19").child("pg").getValue().toString());
 
-                //PARTIDOS PERDIDOS
+                //Declaració dels TextViews referents als partits perduts dels equips
                 TextView partidosperdidos1 = (TextView) view.findViewById(R.id.equipo1pp);
                 TextView partidosperdidos2 = (TextView) view.findViewById(R.id.equipo2pp);
                 TextView partidosperdidos3 = (TextView) view.findViewById(R.id.equipo3pp);
@@ -188,6 +192,7 @@ public class ClasificacionFragment extends Fragment {
                 TextView partidosperdidos19 = (TextView) view.findViewById(R.id.equipo19pp);
                 TextView partidosperdidos20 = (TextView) view.findViewById(R.id.equipo20pp);
 
+                //Introducció de les dades del servidor a cada TextView
                 partidosperdidos1.setText(dataSnapshot.child("0").child("pp").getValue().toString());
                 partidosperdidos2.setText(dataSnapshot.child("1").child("pp").getValue().toString());
                 partidosperdidos3.setText(dataSnapshot.child("2").child("pp").getValue().toString());
@@ -209,7 +214,7 @@ public class ClasificacionFragment extends Fragment {
                 partidosperdidos19.setText(dataSnapshot.child("18").child("pp").getValue().toString());
                 partidosperdidos20.setText(dataSnapshot.child("19").child("pp").getValue().toString());
 
-                //PARTIDOS EMPATADOS
+                //Declaració dels TextViews referents als partits empatats dels equips
                 TextView partidosempatados1 = (TextView) view.findViewById(R.id.equipo1pe);
                 TextView partidosempatados2 = (TextView) view.findViewById(R.id.equipo2pe);
                 TextView partidosempatados3 = (TextView) view.findViewById(R.id.equipo3pe);
@@ -231,6 +236,7 @@ public class ClasificacionFragment extends Fragment {
                 TextView partidosempatados19 = (TextView) view.findViewById(R.id.equipo19pe);
                 TextView partidosempatados20 = (TextView) view.findViewById(R.id.equipo20pe);
 
+                //Introducció de les dades del servidor a cada TextView
                 partidosempatados1.setText(dataSnapshot.child("0").child("pe").getValue().toString());
                 partidosempatados2.setText(dataSnapshot.child("1").child("pe").getValue().toString());
                 partidosempatados3.setText(dataSnapshot.child("2").child("pe").getValue().toString());

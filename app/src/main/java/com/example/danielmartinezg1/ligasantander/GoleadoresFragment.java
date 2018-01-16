@@ -21,24 +21,26 @@ import static android.content.ContentValues.TAG;
 
 public class GoleadoresFragment extends Fragment {
     private List<Jugador> ItemClass;
-    public DatabaseReference mDatabase;
-    public ValueEventListener eventListener;
     private  ListView lista_pichichi;
     private GoleadoresAdapter adaptador;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflem el layout del fragment
         View view = inflater.inflate(R.layout.fragment_goleadores, container, false);
         getActivity().setTitle(R.string.goleadores);
 
         lista_pichichi = (ListView) view.findViewById(R.id.listview_gol);
 
+        //Creem referencia a la base de dades del Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference().child("Pichichis").child("pichichi_list");
 
+        //Detectem qualsevol canvi en la base de dades
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                //Creem la llista amb les dades i apliquem l'adaptador personalitzat creat anteriorment
+                //(GoleadoresAdapter)
                 GenericTypeIndicator<List<Jugador>> t = new GenericTypeIndicator<List<Jugador>>() {};
                 ItemClass = dataSnapshot.getValue(t);
                 adaptador = new GoleadoresAdapter(getActivity(), ItemClass);
@@ -48,7 +50,7 @@ public class GoleadoresFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError error) {
-                // Failed to read value
+                // Error al llegir valor
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });

@@ -13,14 +13,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
+//¡¡¡¡¡¡¡¡¡¡¡¡FRAGMENT DE ADMINISTRADOR!!!!!!!!!!!!!! --> PERMET ACTUALITZAR LES DADES DEL SERVIDOR
 public class WelcomeFragment extends Fragment {
 public DatabaseReference mDatabase;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflem el layout del fragment
         View view = inflater.inflate(R.layout.fragment_welcome, container, false);
         getActivity().setTitle(R.string.Welcome);
 
+        //Métodes que permeten la actualització de la base de dades a Firebase
         actualizaJornadasPartidos();
         actualizaEquipo();
         actualizaPichichi();
@@ -28,6 +30,8 @@ public DatabaseReference mDatabase;
         return view;
     }
 
+    //Actualitza els golejadors: Creem una llista dels jugadors més importants omplint tots els camps
+    //requerits a la classe Pichichis_list creada i la pujem al Firebase
     private void actualizaPichichi() {
         mDatabase = FirebaseDatabase.getInstance().getReference("Pichichis");
 
@@ -50,6 +54,9 @@ public DatabaseReference mDatabase;
         mDatabase.setValue(new Pichichis_list(pichichi_list));
     }
 
+    //Actualitza els equips: Creem una llista dels equips pertanyents a la lliga omplint tots els camps
+    //requerits a la classe Equipo creada. Com aquesta classe inclou una llista de jugadors també la
+    // hem d'omplir amb els camps requerits a la classe Jugador, i pujem tot al Firebase
     private void actualizaEquipo() {
         mDatabase = FirebaseDatabase.getInstance().getReference("Equipos");
 
@@ -331,6 +338,9 @@ public DatabaseReference mDatabase;
 
     }
 
+    //Actualitza les Jornades: Creem una llista de les jornades de la lliga omplint tots els camps
+    //requerits a la classe JornadasList creada. Com aquesta classe inclou una llista dels partits,
+    // la hem de crear també omplint els camps requerits a la classe Partidos, i pujem tot al Firebase
     @NonNull
     private void actualizaJornadasPartidos() {
         mDatabase = FirebaseDatabase.getInstance().getReference("Jornadas");

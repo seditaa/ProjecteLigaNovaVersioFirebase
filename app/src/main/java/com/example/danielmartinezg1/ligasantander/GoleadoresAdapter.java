@@ -14,11 +14,12 @@ import java.util.List;
 /**
  * Created by Dani on 15/01/2018.
  */
-
+//ADAPTADOR PERSONALITZAT PER CONFIGURAR UN NOU MODEL DE LISTVIEW
 public class GoleadoresAdapter extends BaseAdapter {
     protected GoleadoresFragment fragment;
     protected ArrayList<Jugador> items;
 
+    //Constructor
     public GoleadoresAdapter(GoleadoresFragment fragment, ArrayList<Jugador> items) {
         this.fragment = fragment;
         this.items = items;
@@ -27,12 +28,13 @@ public class GoleadoresAdapter extends BaseAdapter {
     Context contextGol;
     List<Jugador> ItemClassGol;
 
-
+    //Constructor
     public GoleadoresAdapter(Context contextGol, List<Jugador> itemClassfavoritos) {
         this.contextGol = contextGol;
         ItemClassGol = itemClassfavoritos;
     }
 
+    //Getters
     @Override
     public int getCount() {
         return ItemClassGol.size();
@@ -48,6 +50,7 @@ public class GoleadoresAdapter extends BaseAdapter {
         return ItemClassGol.indexOf(getItem(position));
     }
 
+    //Métode getView on inflem el nou layout de l'item al ListView dessitjat
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
@@ -60,12 +63,9 @@ public class GoleadoresAdapter extends BaseAdapter {
         TextView nombre = (TextView) convertView.findViewById(R.id.nombre_txt);
 
         Jugador row_pos = ItemClassGol.get(position);
-        // setting the image resource and title
-
 
         goles.setText(row_pos.getGols());
         nombre.setText(row_pos.getNom());
-
 
         return convertView;
     }
