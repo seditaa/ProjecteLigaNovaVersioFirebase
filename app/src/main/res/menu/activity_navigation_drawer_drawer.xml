@@ -5,23 +5,23 @@
         <item
             android:id="@+id/partidos"
             android:icon="@drawable/pelota"
-            android:title="Partidos" />
+            android:title="@string/partidos" />
         <item
             android:id="@+id/calendario"
             android:icon="@drawable/calendario"
-            android:title="Calendario" />
+            android:title="@string/calendario" />
         <item
             android:id="@+id/clasificacion"
             android:icon="@drawable/trophy"
-            android:title="Clasificación" />
+            android:title="@string/Clasificacion" />
         <item
             android:id="@+id/favoritos"
             android:icon="@drawable/estrella"
-            android:title="Favoritos" />
+            android:title="@string/favoritos" />
         <item
             android:id="@+id/goleadores"
             android:icon="@drawable/bota"
-            android:title="Goleadores y asistentes" />
+            android:title="@string/goleadores" />
     </group>
 
 </menu>

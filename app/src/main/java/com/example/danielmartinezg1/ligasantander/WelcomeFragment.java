@@ -19,7 +19,7 @@ public DatabaseReference mDatabase;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_welcome, container, false);
-        getActivity().setTitle("Bienvenido");
+        getActivity().setTitle(R.string.Welcome);
 
         actualizaJornadasPartidos();
         actualizaEquipo();
@@ -536,7 +536,7 @@ public DatabaseReference mDatabase;
         plist15.add(new Partidos("Ath. Club","Real Sociedad","0","0","16/12/2017","FIN"));
         plist15.add(new Partidos("Eibar", "Valencia","2","1","16/12/2017","FIN"));
         plist15.add(new Partidos("Atlético","Alavés","1","0","16/12/2017","FIN"));
-        plist15.add(new Partidos("Madrid","Leganés","-","-","Por definirse","FIN"));
+        plist15.add(new Partidos("Madrid","Leganés","2","0","Por definirse","FIN"));
         plist15.add(new Partidos("Girona","Getafe","1","0","17/12/2017","FIN"));
         plist15.add(new Partidos("Celta","Villarreal","0","1","17/12/2017","FIN"));
         plist15.add(new Partidos("Las Palmas","Espanyol","2","2","17/12/2017","FIN"));
@@ -575,12 +575,12 @@ public DatabaseReference mDatabase;
         plist18.add(new Partidos("Girona","Las Palmas","6","0","13/01/2018","FIN"));
         plist18.add(new Partidos("Madrid","Villarreal","0","1","13/01/2018","FIN"));
         plist18.add(new Partidos("Eibar","Atlético","0","1","13/01/2018","FIN"));
-        plist18.add(new Partidos("Deportivo","Valencia","-","-","13/01/2018","FIN"));
-        plist18.add(new Partidos("Levante","Celta","-","-","14/01/2018","FIN"));
-        plist18.add(new Partidos("Alavés","Sevilla","-","-","14/01/2018","FIN"));
-        plist18.add(new Partidos("Espanyol","Ath. Club","-","-","14/01/2018","FIN"));
-        plist18.add(new Partidos("Real Sociedad","Barcelona","-","-","14/01/2018","FIN"));
-        plist18.add(new Partidos("Betis","Leganés","-","-","15/01/2018","FIN"));
+        plist18.add(new Partidos("Deportivo","Valencia","-","-","13/01/2018","20.45"));
+        plist18.add(new Partidos("Levante","Celta","-","-","14/01/2018","12.00"));
+        plist18.add(new Partidos("Alavés","Sevilla","-","-","14/01/2018","16.15"));
+        plist18.add(new Partidos("Espanyol","Ath. Club","-","-","14/01/2018","18.30"));
+        plist18.add(new Partidos("Real Sociedad","Barcelona","-","-","14/01/2018","20.45"));
+        plist18.add(new Partidos("Betis","Leganés","-","-","15/01/2018","21.00"));
 
 
         List<Partidos> plist19 = new ArrayList<Partidos>();
@@ -634,6 +634,200 @@ public DatabaseReference mDatabase;
         plist22.add(new Partidos("Barcelona","Getafe","-","-","11/02/2018","17.00"));
         plist22.add(new Partidos("Ath. Club","Las Palmas","-","-","11/02/2018","17.00"));
 
+        List<Partidos> plist23 = new ArrayList<Partidos>();
+        plist23.add(new Partidos("Atlético","Ath. Club","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Eibar","Barcelona","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Getafe", "Celta","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Alavés","Deportivo","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Espanyol","Villarreal","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Las Palmas","Sevilla","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Málaga","Valencia","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Girona","Leganés","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Real Sociedad","Levante","-","-","18/02/2018","Por definir"));
+        plist23.add(new Partidos("Betis","Madrid","-","-","18/02/2018","Por definir"));
+
+
+        List<Partidos> plist24 = new ArrayList<Partidos>();
+        plist24.add(new Partidos("Sevilla","Atético","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Levante","Betis","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Deportivo", "Espanyol","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Valencia","Real Sociedad","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Barcelona","Girona","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Celta","Eibar","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Villarreal","Getafe","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Leganés","Las Palmas","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Ath. Club","Málaga","-","-","25/02/2018","Por definir"));
+        plist24.add(new Partidos("Madrid","Alavés","-","-","25/02/2018","Por definir"));
+
+
+        List<Partidos> plist25 = new ArrayList<Partidos>();
+        plist25.add(new Partidos("Las Palmas","Barcelona","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Girona","Celta","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Getafe", "Deportivo","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Espanyol","Madrid","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Eibar","Villarreal","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Málaga","Sevilla","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Ath. Club","Valencia","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Atlético","Leganés","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Alavés","Levante","-","-","28/02/2018","Por definir"));
+        plist25.add(new Partidos("Betis","Real Sociedad","-","-","28/02/2018","Por definir"));
+
+
+        List<Partidos> plist26 = new ArrayList<Partidos>();
+        plist26.add(new Partidos("Sevilla","Ath. Club","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Barcelona","Atlético","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Valncia", "Betis","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Levante","Espanyol","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Villarreal","Girona","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Deportivo","Eibar","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Madrid","Getafe","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Celta","Las Palmas","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Leganés","Málaga","-","-","04/03/2018","Por definir"));
+        plist26.add(new Partidos("Real Sociedad","Alavés","-","-","04/03/2018","Por definir"));
+
+
+        List<Partidos> plist27 = new ArrayList<Partidos>();
+        plist27.add(new Partidos("Málaga","Barcelona","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Alavés","Betis","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Atlético", "Celta","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Girona","Deportivo","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Las Palmas","Villarreal","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Espayol","Real Sociedad","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Sevilla","Valencia","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Ath. Club","Leganés","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Getafe","Levante","-","-","11/03/2018","Por definir"));
+        plist27.add(new Partidos("Eibar","Madrid","-","-","11/03/2018","Por definir"));
+
+
+        List<Partidos> plist28 = new ArrayList<Partidos>();
+        plist28.add(new Partidos("Barcelona","Ath. Club","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Villarreal","Atlético","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Betis", "Espanyol","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Leganés","Sevilla","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Madrid","Girona","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Levante","Eibar","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Real Sociedad","Getafe","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Deportivo","Las Palmas","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Celta","Málaga","-","-","18/03/2018","Por definir"));
+        plist28.add(new Partidos("Valencia","Alavés","-","-","18/03/2018","Por definir"));
+
+
+        List<Partidos> plist29 = new ArrayList<Partidos>();
+        plist29.add(new Partidos("Málaga","Villarreal","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Espanyol","Alavés","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Atlétio", "Deportivo","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Las Palmas","Madrid","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Sevilla","Barcelona","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Getafe","Betis","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Leganés","Valencia","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Girona","Levante","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Ath. Club","Celta","-","-","01/04/2018","Por definir"));
+        plist29.add(new Partidos("Eibar","Real Sociedad","-","-","01/04/2018","Por definir"));
+
+
+        List<Partidos> plist30 = new ArrayList<Partidos>();
+        plist30.add(new Partidos("Betis","Eibar","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Alavés","Getafe","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Deportivo", "Málaga","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Celta","Sevilla","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Barcelona","Leganés","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Levante","Las Palmas","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Madrid","Atlético","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Villarreal","Ath. Club","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Real Sociedad","Girona","-","-","08/04/2018","Por definir"));
+        plist30.add(new Partidos("Valencia","Espanyol","-","-","08/04/2018","Por definir"));
+
+
+        List<Partidos> plist31 = new ArrayList<Partidos>();
+        plist31.add(new Partidos("Atlético","Levante","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Barcelona","Valencia","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Girona", "Betis","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Leganés","Celta","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Eibar","Alavés","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Sevilla","Villarreal","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Ath. Club","Deportivo","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Málaga","Madrid","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Getafe","Espanyol","-","-","15/04/2018","Por definir"));
+        plist31.add(new Partidos("Las Palmas","Real Sociedad","-","-","15/04/2018","Por definir"));
+
+
+        List<Partidos> plist32 = new ArrayList<Partidos>();
+        plist32.add(new Partidos("Alavés","Girona","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Espanyol","Eibar","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Madrid", "Ath. Club","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Real Sociedad","Atlético","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Betis","Las Palmas","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Villarreal","Leganés","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Levante","Málaga","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Deportivo","Sevilla","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Valencia","Getafe","-","-","18/04/2018","Por definir"));
+        plist32.add(new Partidos("Barcelona","Celta","-","-","18/04/2018","Por definir"));
+
+
+        List<Partidos> plist33 = new ArrayList<Partidos>();
+        plist33.add(new Partidos("Ath. Club","Levante","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Málaga","Real Sociedad","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Girona", "Espanyol","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Las Palmas","Alavés","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Barcelona","Villarreal","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Eibar","Getafe","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Atlético","Betis","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Celta","Valencia","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Sevilla","Madrid","-","-","22/04/2018","Por definir"));
+        plist33.add(new Partidos("Leganés","Deportivo","-","-","22/04/2018","Por definir"));
+
+
+        List<Partidos> plist34 = new ArrayList<Partidos>();
+        plist34.add(new Partidos("Villarreal","Celta","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Real Sociedad","Ath. Club","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Valencia", "Eibar","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Madrid","Leganés","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Espanyol","Las Palmas","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Betis","Málaga","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Deportivo","Barcelona","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Alavés","Atlético","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Getafe","Girona","-","-","29/04/2018","Por definir"));
+        plist34.add(new Partidos("Levante","Sevilla","-","-","29/04/2018","Por definir"));
+
+
+        List<Partidos> plist35 = new ArrayList<Partidos>();
+        plist35.add(new Partidos("Atlético","Espanyol","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Villarreal","Valencia","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Málaga", "Alavés","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Barcelona","Madrid","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Sevilla","Real Sociedad","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Girona","Eibar","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Las Palmas","Getafe","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Ath. Club","Betis","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Celta","Depor","-","-","06/05/2018","Por definir"));
+        plist35.add(new Partidos("Leganés","Levante","-","-","06/05/2018","Por definir"));
+
+
+        List<Partidos> plist36 = new ArrayList<Partidos>();
+        plist36.add(new Partidos("Real Sociedad","Leganés","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Alavés","Ath. Club","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Getafe", "Atlético","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Deportivo","Villarreal","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Eibar","Las Palmas","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Levante","Barcelona","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Betis","Sevilla","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Espanyol","Málaga","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Madrid","Celta","-","-","13/05/2018","Por definir"));
+        plist36.add(new Partidos("Girona","Valencia","-","-","13/05/2018","Por definir"));
+
+
+        List<Partidos> plist37 = new ArrayList<Partidos>();
+        plist37.add(new Partidos("Atlético","Eibar","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Celta","Levante","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Málaga", "Getafe","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Barcelona","Real Sociedad","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Sevilla","Alavés","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Leganés","Betis","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Valencia","Deportivo","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Ath. Club","Espanyol","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Las Palmas","Girona","-","-","20/05/2018","Por definir"));
+        plist37.add(new Partidos("Villarreal","Madrid","-","-","20/05/2018","Por definir"));
+
 
         jlist0.add(new JornadasList("Jornada1",plist0));
         jlist0.add(new JornadasList("Jornada2",plist1));
@@ -658,6 +852,21 @@ public DatabaseReference mDatabase;
         jlist0.add(new JornadasList("Jornada21",plist20));
         jlist0.add(new JornadasList("Jornada22",plist21));
         jlist0.add(new JornadasList("Jornada23",plist22));
+        jlist0.add(new JornadasList("Jornada24",plist23));
+        jlist0.add(new JornadasList("Jornada25",plist24));
+        jlist0.add(new JornadasList("Jornada26",plist25));
+        jlist0.add(new JornadasList("Jornada27",plist26));
+        jlist0.add(new JornadasList("Jornada28",plist27));
+        jlist0.add(new JornadasList("Jornada29",plist28));
+        jlist0.add(new JornadasList("Jornada30",plist29));
+        jlist0.add(new JornadasList("Jornada31",plist30));
+        jlist0.add(new JornadasList("Jornada32",plist31));
+        jlist0.add(new JornadasList("Jornada33",plist32));
+        jlist0.add(new JornadasList("Jornada34",plist33));
+        jlist0.add(new JornadasList("Jornada35",plist34));
+        jlist0.add(new JornadasList("Jornada36",plist35));
+        jlist0.add(new JornadasList("Jornada37",plist36));
+        jlist0.add(new JornadasList("Jornada38",plist37));
 
         mDatabase.setValue(new Jornadas(jlist0));
     }

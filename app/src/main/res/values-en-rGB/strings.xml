@@ -9,12 +9,12 @@
     <string name="puntos">Points</string>
     <string name="partidos">Matches</string>
     <string name="calendario">Calendar</string>
-    <string name="favoritos">Favorites</string>
-    <string name="goleadores">Scorers and assistants</string>
+    <string name="favoritos">Favourites</string>
+    <string name="goleadores">Main Scorers</string>
     <string name="seleccionar">Select</string>
     <string name="textobotonfav">Add</string>
     <string name="escogerequipo">Choose one team</string>
-    <string name="TituloCalendario">Choose a journey</string>
+    <string name="TituloCalendario">Choose a round</string>
     <string name="goles">Goals</string>
     <string name="assistencias">Assistences</string>
     <string name="Informacionequipo">Team information</string>

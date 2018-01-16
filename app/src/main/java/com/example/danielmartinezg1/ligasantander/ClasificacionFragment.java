@@ -31,7 +31,7 @@ public class ClasificacionFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_clasificacion, container, false);
 
-        getActivity().setTitle("Clasificación");
+        getActivity().setTitle(R.string.Clasificacion);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Equipos").child("equipo_list");
         eventListener = new ValueEventListener() {

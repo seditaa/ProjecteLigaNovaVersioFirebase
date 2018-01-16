@@ -29,7 +29,7 @@ public class GoleadoresFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_goleadores, container, false);
-        getActivity().setTitle("Goleadores y asistentes");
+        getActivity().setTitle(R.string.goleadores);
 
         lista_pichichi = (ListView) view.findViewById(R.id.listview_gol);
 

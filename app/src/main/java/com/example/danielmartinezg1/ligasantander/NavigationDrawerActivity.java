@@ -106,7 +106,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 menuItem.setChecked(true);
                 setFragment(0);
                 drawer.closeDrawer(GravityCompat.START);
-                Log.i("Dani","clicado");
                 return true;
             case R.id.calendario:
                 menuItem.setChecked(true);
@@ -117,7 +116,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 menuItem.setChecked(true);
                 setFragment(2);
                 drawer.closeDrawer(GravityCompat.START);
-                Log.i("Dani","clicado");
                 return true;
             case R.id.favoritos:
                 menuItem.setChecked(true);
@@ -128,7 +126,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 menuItem.setChecked(true);
                 setFragment(4);
                 drawer.closeDrawer(GravityCompat.START);
-                Log.i("Dani","clicado");
                 return true;
 
         }
