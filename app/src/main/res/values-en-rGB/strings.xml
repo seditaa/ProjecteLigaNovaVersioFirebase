@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LigaSantander</string>
+    <string name="action_settings">Settings</string>
+    <string name="Welcome">Welcome!</string>
+    <string name="calendar">Calendar</string>
+    <string name="Clasificacion">Classification</string>
+    <string name="equipos">Teams</string>
+    <string name="puntos">Points</string>
+    <string name="partidos">Matches</string>
+    <string name="calendario">Calendar</string>
+    <string name="favoritos">Favorites</string>
+    <string name="goleadores">Scorers and assistants</string>
+    <string name="seleccionar">Select</string>
+    <string name="textobotonfav">Add</string>
+    <string name="escogerequipo">Choose one team</string>
+    <string name="TituloCalendario">Choose a journey</string>
+    <string name="goles">Goals</string>
+    <string name="assistencias">Assistences</string>
+    <string name="Informacionequipo">Team information</string>
+    <string name="confirmation">Delete</string>
+    <string name="question">Surely you want to delete it?</string>
+    <string name="nombrejugadores">Featured players</string>
+    <string name="delete">Delete</string>
+    <string name="nombre_jugador">Player name</string>
+    <string name="goleador">Scorer</string>
+
+</resources>
